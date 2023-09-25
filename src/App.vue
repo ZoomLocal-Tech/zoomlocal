@@ -1,0 +1,78 @@
+<script setup>
+import HomePage from './components/HomePage.vue'
+</script>
+
+<template>
+  <header>
+    <div class="wrapper">
+      <HomePage msg="ZoomLocal" />
+    </div>
+  </header>
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+  text-align: center;
+  padding: 10px;
+  padding-top: 2rem;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: flex-start;
+    top: 0;
+    place-items: center;
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
+</style>
