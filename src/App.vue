@@ -1,21 +1,23 @@
 <script setup>
 import HomePage from './components/HomePage.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <header>
+  <header class="">
     <div class="wrapper">
       <HomePage msg="ZoomLocal" />
     </div>
   </header>
+  <Footer />
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   text-align: center;
-  padding: 10px;
-  padding-top: 2rem;
+  padding: 2rem;
+  justify-content: center;
 }
 
 .logo {
