@@ -20,7 +20,7 @@ defineProps({
           rel="noopener"
         >
           <div class="h-[120px] w-[160px]">
-            <img alt="Fly logo" class="logo cursor-pointer" src="@/assets/fly-logo.png" />
+            <img alt="Fly logo" class="logo cursor-pointer" src="@/assets/fly-logo.webp" />
           </div>
           <h3 class="font-bold text-2xl mb-3 hover:text-blue-800">fly</h3>
         </a>
@@ -44,7 +44,7 @@ defineProps({
             <img
               alt="Fly logo"
               class="logo cursor-pointer h-[107%] mx-auto relative sm:top-[-17px]"
-              src="@/assets/around-logo.png"
+              src="@/assets/around-logo.webp"
             />
           </div>
           <h3 class="font-bold text-2xl mb-3 hover:text-blue-800">around</h3>
