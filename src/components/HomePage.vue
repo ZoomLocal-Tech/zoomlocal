@@ -22,7 +22,7 @@ defineProps({
           <div class="h-[120px] w-[160px]">
             <img alt="Fly logo" class="logo cursor-pointer" src="@/assets/fly-logo.png" />
           </div>
-          <h3 class="font-bold text-2xl mb-3 text-black hover:text-blue-800">fly</h3>
+          <h3 class="font-bold text-2xl mb-3 hover:text-blue-800">fly</h3>
         </a>
         <h3 class="tagline mb-4">
           Your social media steroids!
@@ -47,7 +47,7 @@ defineProps({
               src="@/assets/around-logo.png"
             />
           </div>
-          <h3 class="font-bold text-2xl mb-3 text-black hover:text-blue-800">around</h3>
+          <h3 class="font-bold text-2xl mb-3 hover:text-blue-800">around</h3>
         </a>
         <h3 class="tagline mb-1">
           Your superpower to discover and <br />
@@ -78,5 +78,10 @@ h2 {
 h3.tagline {
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+h2,
+h3 {
+  color: var(--vt-c-primary-text);
 }
 </style>
