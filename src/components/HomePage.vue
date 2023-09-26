@@ -27,7 +27,7 @@ defineProps({
         <h3 class="tagline mb-4">
           Your social media steroids!
           <a href="https://uat-fly.web.app/" target="_blank" rel="noopener"
-            ><span class="text-base text-blue-800 font-medium leading-4 cursor-pointer"
+            ><span class="text-base text-blue-600 font-medium leading-4 cursor-pointer"
               >Visit</span
             ></a
           >
@@ -53,7 +53,7 @@ defineProps({
           Your superpower to discover and <br />
           connect with people around!
           <a href="https://goaround.me/" target="_blank" rel="noopener"
-            ><span class="text-base text-blue-800 font-medium leading-4 cursor-pointer"
+            ><span class="text-base text-blue-600 font-medium leading-4 cursor-pointer"
               >Visit</span
             ></a
           >
