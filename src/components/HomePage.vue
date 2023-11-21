@@ -25,7 +25,7 @@ defineProps({
           <h3 class="font-bold text-2xl mb-3 hover:text-blue-800">fly</h3>
         </a>
         <h3 class="tagline mb-4">
-          Your social media steroids!
+          Elevate Your Social Game, Effortlessly!
           <a href="https://uat-fly.web.app/" target="_blank" rel="noopener"
             ><span class="text-base text-blue-600 font-medium leading-4 cursor-pointer"
               >Visit</span
