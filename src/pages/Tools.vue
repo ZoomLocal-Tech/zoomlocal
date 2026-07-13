@@ -1,7 +1,8 @@
 <script setup>
-import { ArrowRight } from 'lucide-vue-next'
+import { Sparkles } from 'lucide-vue-next'
 import { toolsByCategory, TOOLS } from '../data/tools.js'
 import { useSeo, SITE_URL } from '../composables/useSeo.js'
+import ToolCard from '../components/ToolCard.vue'
 
 const groups = toolsByCategory()
 
@@ -25,25 +26,36 @@ useSeo({
 </script>
 
 <template>
-  <div class="pt-28 pb-24">
+  <div class="relative overflow-hidden pt-28 pb-24">
+    <!-- ambient background -->
+    <div aria-hidden class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-brand-50/70 via-transparent to-transparent" />
+    <div aria-hidden class="pointer-events-none absolute -top-24 right-[-6rem] -z-10 h-80 w-80 rounded-full bg-brand-200/30 blur-3xl animate-blob" />
+    <div aria-hidden class="pointer-events-none absolute top-40 left-[-6rem] -z-10 h-80 w-80 rounded-full bg-accent-200/30 blur-3xl animate-blob" style="animation-delay: 5s" />
+
     <div class="container mx-auto px-4">
-      <div class="text-center mb-16 max-w-3xl mx-auto" v-reveal>
-        <h1 class="text-4xl md:text-6xl font-black mb-4 text-white">Free Audit Tools</h1>
-        <p class="text-gray-400 text-lg">Run a free audit on any business in seconds, Google, SEO, reviews, AI visibility, social and more. See exactly what to fix, then get a branded report.</p>
+      <!-- hero -->
+      <div class="mx-auto mb-16 max-w-3xl text-center" v-reveal>
+        <span class="mb-4 inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-600">
+          <Sparkles class="h-3.5 w-3.5" /> Free forever · No signup
+        </span>
+        <h1 class="text-4xl font-black text-ink md:text-6xl">Free <span class="text-gradient-brand">audit tools</span></h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+          Run a free audit on any business in seconds — Google, SEO, reviews, AI visibility, social and more.
+          See exactly what to fix, then get a branded report.
+        </p>
       </div>
 
-      <div v-for="group in groups" :key="group.key" :id="group.key" class="mb-14 scroll-mt-24">
-        <h2 class="text-2xl font-bold text-white mb-6">{{ group.label }}</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <RouterLink v-for="t in group.tools" :key="t.slug" :to="`/tools/${t.slug}`"
-            class="group block bg-gray-900/80 border border-gray-800 hover:border-green-500/50 rounded-2xl p-6 transition-all duration-300">
-            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-green-400 transition-colors">{{ t.name }}</h3>
-            <p class="text-green-400/80 text-xs mb-3">{{ t.tagline }}</p>
-            <p class="text-gray-500 text-sm mb-4">{{ t.description }}</p>
-            <span class="inline-flex items-center text-green-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
-              Try it free <ArrowRight class="w-4 h-4 ml-1.5" />
-            </span>
-          </RouterLink>
+      <!-- grouped tool cards -->
+      <div v-for="group in groups" :key="group.key" :id="group.key" class="mb-16 scroll-mt-24">
+        <div class="mb-6 flex items-center gap-3" v-reveal>
+          <h2 class="text-2xl font-black text-ink">{{ group.label }}</h2>
+          <span class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
+          <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-bold text-slate-500">{{ group.tools.length }}</span>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div v-for="(t, i) in group.tools" :key="t.slug" v-reveal="i">
+            <ToolCard :tool="t" />
+          </div>
         </div>
       </div>
     </div>

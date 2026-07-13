@@ -1,5 +1,5 @@
 // ZoomLocal agency embed config (fly-social white-label).
-export const EMBED_AGENCY_SLUG = 'vidya-surendran-leads'
+export const EMBED_AGENCY_SLUG = 'manu-mani-leads-2'
 export const EMBED_ORIGIN = 'https://www.fly-social.com'
 
 // Only these tools have a live embed enabled on the agency account. Other
@@ -20,7 +20,13 @@ export const EMBED_ENABLED = new Set([
   'seo-site-audit',
 ])
 
+// Per-tool fly-social account override. Empty while every live embed runs on
+// the default account; add `'tool-slug': 'other-account'` here if one moves.
+export const EMBED_SLUG_OVERRIDES = {}
+
 export function embedUrl(toolSlug) {
-  if (!EMBED_AGENCY_SLUG || !EMBED_ENABLED.has(toolSlug)) return ''
-  return `${EMBED_ORIGIN}/embed/${EMBED_AGENCY_SLUG}/${toolSlug}`
+  if (!EMBED_ENABLED.has(toolSlug)) return ''
+  const slug = EMBED_SLUG_OVERRIDES[toolSlug] || EMBED_AGENCY_SLUG
+  if (!slug) return ''
+  return `${EMBED_ORIGIN}/embed/${slug}/${toolSlug}`
 }
