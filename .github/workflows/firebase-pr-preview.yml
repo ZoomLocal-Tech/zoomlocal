@@ -1,0 +1,42 @@
+name: Firebase Hosting preview (PR)
+
+# On every pull request, build the site and deploy it to a temporary
+# Firebase Hosting preview channel. The action comments the preview URL on
+# the PR so you can review the live changes before merging to master.
+
+on:
+  pull_request: {}
+
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    # Skip PRs from forks (they have no access to the deploy secret).
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build (vite-ssg static site)
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: npm run build
+
+      - name: Deploy to a preview channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZOOMLOCAL_77BE3 }}
+          projectId: zoomlocal-77be3
+          expires: 7d
