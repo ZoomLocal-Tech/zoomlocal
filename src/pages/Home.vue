@@ -478,7 +478,7 @@ useSeo({
     </section>
 
     <!-- ===================== CONTACT ===================== -->
-    <section id="contact" class="relative py-20 md:py-24 overflow-hidden">
+    <section id="contact" class="relative isolate py-20 md:py-24 overflow-hidden">
       <div aria-hidden class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-600 to-brand-800" />
       <div aria-hidden class="absolute inset-0 -z-10 opacity-20" :style="{ backgroundImage: 'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }" />
       <div class="container mx-auto px-4">
