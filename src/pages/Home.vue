@@ -205,7 +205,7 @@ useSeo({
           <p class="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">Everything we manage for you — end to end</p>
           <div class="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             <div v-for="c in CAPABILITIES" :key="c.label"
-              class="group flex flex-col items-center gap-2.5 rounded-2xl border border-slate-200 bg-white/80 px-3 py-4 text-center shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-brand">
+              class="group flex flex-col items-center gap-2.5 rounded-2xl border border-slate-200 bg-white/90 px-3 py-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-brand">
               <span class="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110" :style="{ background: c.color + '18', color: c.color }">
                 <component :is="c.icon" class="h-5 w-5" />
               </span>
@@ -244,7 +244,7 @@ useSeo({
           <!-- classic search + social platforms -->
           <div class="flex flex-wrap items-center justify-center gap-2.5 md:gap-3">
             <div v-for="p in PLATFORMS" :key="p.name"
-              class="group flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/90 px-4 py-2 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-brand">
+              class="group flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/90 px-4 py-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-brand">
               <span class="inline-flex h-6 shrink-0 items-center [&_svg]:h-full [&_svg]:w-auto">
                 <BrandLogo :name="p.brand" />
               </span>
@@ -258,7 +258,7 @@ useSeo({
               <Sparkles class="h-3.5 w-3.5" /> AEO + GEO · AI Search
             </span>
             <div v-for="p in AI_PLATFORMS" :key="p.name"
-              class="group flex items-center gap-2.5 rounded-full border border-violet-200/70 bg-white/90 px-4 py-2 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-[0_18px_40px_-16px_rgba(139,92,246,0.5)]">
+              class="group flex items-center gap-2.5 rounded-full border border-violet-200/70 bg-white/90 px-4 py-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-[0_18px_40px_-16px_rgba(139,92,246,0.5)]">
               <span class="inline-flex h-6 shrink-0 items-center [&_svg]:h-full [&_svg]:w-auto">
                 <BrandLogo :name="p.brand" />
               </span>

@@ -19,8 +19,18 @@ body {
    a flat white page. Fixed so the grain feels like paper behind the content. */
 .app-bg {
   background-color: #eef2f9;
-  /* crushed-paper texture (fractal noise lit as 3D creases) tinted by a soft
-     blue/green/violet colour wash layered over it. */
+}
+/* Painted on a position:fixed layer (composited once) rather than
+   background-attachment:fixed (which forces a full repaint every scroll
+   frame). Same look, no scroll jank. Sits behind all content and section
+   tints via a deep negative z-index. */
+.app-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -40;
+  pointer-events: none;
+  background-color: #eef2f9;
   background-image:
     radial-gradient(50% 45% at 14% 10%, rgba(30, 144, 255, 0.16), transparent 70%),
     radial-gradient(46% 42% at 86% 8%, rgba(46, 203, 142, 0.14), transparent 70%),
@@ -29,7 +39,6 @@ body {
   background-size: auto, auto, auto, cover;
   background-position: 0 0, 0 0, 0 0, center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-attachment: fixed, fixed, fixed, fixed;
 }
 
 #app {
