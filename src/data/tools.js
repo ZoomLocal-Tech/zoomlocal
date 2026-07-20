@@ -32,10 +32,10 @@ export const TOOLS = [
   { slug: 'gbp-description-generator', name: 'AI GBP Description Generator', category: 'content', tagline: 'A ready-to-use Google profile description', description: 'Writes an SEO-friendly Google Business Profile description with the city, service and a clear call to action, ready to paste.' },
   { slug: 'content-calendar-generator', name: '90-Day Content Calendar Generator', category: 'content', tagline: 'Three months of posts, planned', description: 'Builds a 90-day social content calendar with captions, hashtags, formats and image ideas, so there is never a blank page.' },
 
-  // Healthcare self-tests
-  { slug: 'smile-score', name: 'SmileScore (Dental)', category: 'health', tagline: 'A free smile self-check for dental clinics', description: 'Lets a visitor take a quick smile self-assessment from a photo, then delivers the result to the clinic as a warm lead.', health: true },
-  { slug: 'hearing-test', name: 'Hearing Test (ENT)', category: 'health', tagline: 'A free online hearing screen for ENT clinics', description: 'A simple online hearing screening visitors can take from their phone, with the result sent to the clinic as a lead.', health: true },
-  { slug: 'eye-test', name: 'Eye Test (Optometry)', category: 'health', tagline: 'A free vision self-test for eye clinics', description: 'A quick online vision self-test for visitors, delivering each result to the optometry clinic as a lead.', health: true },
+  // Healthcare self-tests (rendered via their own Vercel widget scripts)
+  { slug: 'smile-score', name: 'SmileScore (Dental)', category: 'health', tagline: 'A free smile self-check for dental clinics', description: 'Lets a visitor take a quick smile self-assessment from a photo, then delivers the result to the clinic as a warm lead.', health: true, widget: { id: 'smile-score-widget', src: 'https://smile-score-widget.vercel.app/smile-score-widget.js' } },
+  { slug: 'hearing-test', name: 'Hearing Test (ENT)', category: 'health', tagline: 'A free online hearing screen for ENT clinics', description: 'A simple online hearing screening visitors can take from their phone, with the result sent to the clinic as a lead.', health: true, widget: { id: 'hearing-test-widget', src: 'https://hearing-test-widget.vercel.app/hearing-test-widget.js' } },
+  { slug: 'eye-test', name: 'Eye Test (Optometry)', category: 'health', tagline: 'A free vision self-test for eye clinics', description: 'A quick online vision self-test for visitors, delivering each result to the optometry clinic as a lead.', health: true, widget: { id: 'optometrist-widget', src: 'https://optometrist-widget.vercel.app/optometrist-widget.js' } },
 ]
 
 export function getToolBySlug(slug) {

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   ArrowRight, ArrowLeft, Check, MessageSquare, Zap, Clock, ShieldCheck,
@@ -12,6 +12,7 @@ import { useSeo, SITE_URL } from '../composables/useSeo.js'
 const route = useRoute()
 const tool = computed(() => getToolBySlug(route.params.slug))
 const src = computed(() => (tool.value ? embedUrl(tool.value.slug) : ''))
+const widget = computed(() => tool.value?.widget || null)
 const iframeRef = ref(null)
 
 // Per-category theming so each tool page feels tailored while staying on-brand.
@@ -74,8 +75,40 @@ function onMessage(e) {
     window.scrollTo({ top: Math.max(0, fallbackY), behavior: 'smooth' })
   }
 }
-onMounted(() => window.addEventListener('message', onMessage))
-onUnmounted(() => window.removeEventListener('message', onMessage))
+// Healthcare self-tests render via their own external widget script that
+// mounts into a div by id. Inject it on the client only, and re-init on SPA
+// navigation between tool pages.
+let injected = null // { script, id }
+function cleanupWidget() {
+  if (!injected) return
+  injected.script?.remove()
+  const el = document.getElementById(injected.id)
+  if (el) el.innerHTML = ''
+  injected = null
+}
+function loadWidget() {
+  if (typeof document === 'undefined') return
+  cleanupWidget()
+  const w = widget.value
+  if (!w) return
+  nextTick(() => {
+    const s = document.createElement('script')
+    s.src = w.src
+    s.async = true
+    document.body.appendChild(s)
+    injected = { script: s, id: w.id }
+  })
+}
+
+onMounted(() => {
+  window.addEventListener('message', onMessage)
+  loadWidget()
+})
+onUnmounted(() => {
+  window.removeEventListener('message', onMessage)
+  cleanupWidget()
+})
+watch(() => route.params.slug, loadWidget)
 </script>
 
 <template>
@@ -126,6 +159,23 @@ onUnmounted(() => window.removeEventListener('message', onMessage))
             <iframe ref="iframeRef" :src="src" title="Free tool"
               class="rounded-2xl"
               style="width:100%;height:800px;border:none;display:block;background:#fff;" allow="clipboard-write" />
+          </div>
+          <p class="mt-3 text-center text-sm text-slate-500">
+            <Sparkles class="-mt-0.5 inline h-4 w-4" :style="{ color: cat.color }" /> This is the real, working tool — running live on ZoomLocal.
+          </p>
+        </div>
+
+        <!-- ===== healthcare self-test widget (external script) ===== -->
+        <div v-else-if="widget" class="relative mx-auto mt-12 max-w-4xl" v-reveal>
+          <div aria-hidden class="absolute -inset-4 -z-10 rounded-[32px] opacity-50 blur-3xl" :style="{ background: `linear-gradient(120deg, ${cat.color}22, #16b67c1f)` }" />
+          <div class="overflow-hidden rounded-[24px] bg-white p-3 shadow-card ring-1 ring-slate-200/70 md:p-4">
+            <div class="flex items-center justify-between px-1 pb-2">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-slate-400">
+                <span class="h-1.5 w-1.5 rounded-full animate-pulse" :style="{ background: cat.color }" /> Live tool
+              </span>
+              <span class="text-[11px] font-semibold text-slate-400">ZoomLocal</span>
+            </div>
+            <div :id="widget.id" class="min-h-[420px]" />
           </div>
           <p class="mt-3 text-center text-sm text-slate-500">
             <Sparkles class="-mt-0.5 inline h-4 w-4" :style="{ color: cat.color }" /> This is the real, working tool — running live on ZoomLocal.

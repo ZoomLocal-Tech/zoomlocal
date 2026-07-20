@@ -51,5 +51,4 @@ export const ORGANIZATION_SCHEMA = {
   telephone: '+91-92703-62196',
   description:
     'ZoomLocal is a local growth agency. We offer Google Business Profile management (our core service), website development, Google Ads, and AEO/GEO AI search optimization for local businesses.',
-  sameAs: ['https://fly-social.com'],
 }

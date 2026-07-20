@@ -25,7 +25,6 @@ function select(i) {
 }
 
 const current = computed(() => TABS[active.value])
-const currentUrl = computed(() => embedUrl(current.value.slug))
 </script>
 
 <template>
@@ -87,8 +86,7 @@ const currentUrl = computed(() => embedUrl(current.value.slug))
           This is the <strong class="text-ink">real, working {{ current.label }}</strong>, running live on ZoomLocal.
         </p>
         <a
-          :href="currentUrl || `/tools/${current.slug}`"
-          target="_blank"
+          :href="`/tools/${current.slug}`"
           rel="noopener"
           class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:text-brand-800"
         >
