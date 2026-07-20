@@ -26,7 +26,7 @@ const error = ref('')
 const submitted = ref(false)
 
 const inputClass =
-  'w-full bg-gray-800/80 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/25 transition-colors'
+  'w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-ink placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:bg-white transition-colors'
 
 async function handleSubmit() {
   error.value = ''
@@ -75,11 +75,11 @@ async function handleSubmit() {
 
 <template>
   <div v-if="submitted" class="text-center py-6">
-    <div class="w-16 h-16 rounded-full bg-green-500/15 flex items-center justify-center mx-auto mb-5">
-      <CheckCircle2 class="w-8 h-8 text-green-400" />
+    <div class="w-16 h-16 rounded-full bg-accent-100 flex items-center justify-center mx-auto mb-5">
+      <CheckCircle2 class="w-8 h-8 text-accent-600" />
     </div>
-    <h3 class="text-2xl font-bold text-white mb-2">Thank you!</h3>
-    <p class="text-gray-400">
+    <h3 class="text-2xl font-bold text-ink mb-2">Thank you!</h3>
+    <p class="text-slate-500">
       Our Local SEO team will reach out within 24 hours. Want to talk sooner? Message us on WhatsApp.
     </p>
   </div>
@@ -87,31 +87,31 @@ async function handleSubmit() {
   <form v-else @submit.prevent="handleSubmit" class="space-y-5">
     <div class="grid md:grid-cols-2 gap-5">
       <div>
-        <label class="block text-sm font-medium text-gray-300 mb-1.5">Your Name *</label>
+        <label class="block text-sm font-medium text-slate-700 mb-1.5">Your Name *</label>
         <input v-model="form.name" type="text" required :class="inputClass" placeholder="John Doe" />
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-300 mb-1.5">Email *</label>
+        <label class="block text-sm font-medium text-slate-700 mb-1.5">Email *</label>
         <input v-model="form.email" type="email" required :class="inputClass" placeholder="john@business.com" />
       </div>
     </div>
 
     <div class="grid md:grid-cols-2 gap-5">
       <div>
-        <label class="block text-sm font-medium text-gray-300 mb-1.5">Phone *</label>
+        <label class="block text-sm font-medium text-slate-700 mb-1.5">Phone *</label>
         <input v-model="form.phone" type="tel" required :class="inputClass" placeholder="+91 98765 43210" />
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-300 mb-1.5">Your Business Name *</label>
+        <label class="block text-sm font-medium text-slate-700 mb-1.5">Your Business Name *</label>
         <input v-model="form.businessName" type="text" required :class="inputClass" placeholder="Your business on Google" />
       </div>
     </div>
 
     <div>
-      <label class="block text-sm font-medium text-gray-300 mb-1.5">Number of Locations</label>
+      <label class="block text-sm font-medium text-slate-700 mb-1.5">Number of Locations</label>
       <select
         v-model="form.locations"
-        class="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/25 transition-colors"
+        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-ink focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:bg-white transition-colors"
       >
         <option value="1">1 location</option>
         <option value="2-5">2-5 locations</option>
@@ -121,11 +121,11 @@ async function handleSubmit() {
     </div>
 
     <div>
-      <label class="block text-sm font-medium text-gray-300 mb-1.5">Message</label>
+      <label class="block text-sm font-medium text-slate-700 mb-1.5">Message</label>
       <textarea
         v-model="form.message"
         rows="3"
-        class="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/25 transition-colors resize-none"
+        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-ink placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:bg-white transition-colors resize-none"
         placeholder="Tell us about your business and what you're looking for..."
       ></textarea>
     </div>
