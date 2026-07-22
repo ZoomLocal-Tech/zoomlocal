@@ -1,6 +1,6 @@
 <script setup>
 import { Check, ArrowRight } from 'lucide-vue-next'
-import { useSeo, SITE_URL } from '../composables/useSeo.js'
+import { useSeo, SITE_URL, breadcrumbLd, faqLd } from '../composables/useSeo.js'
 
 const MONTHLY_FEATURES = ["Fully managed by ZoomLocal's Local SEO experts", 'Review monitoring & AI-powered responses', '24/7 profile protection & alerts', 'Weekly GBP content & posts', 'Keyword rank tracking', 'Monthly performance reports', 'Review generator (QR code + link)', 'Profile optimization & audit']
 const ANNUAL_FEATURES = ['Everything in Monthly plan', 'Priority support', 'Locked-in pricing', 'No monthly auto-debit hassle']
@@ -16,17 +16,26 @@ useSeo({
   description:
     'Simple, all-inclusive managed Local SEO pricing. From ₹100/day per location on the annual plan or ₹120/day billed monthly. Everything handled by our experts.',
   path: '/pricing',
-  jsonLd: {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Managed Local SEO',
-    description: 'Done-for-you Google Business Profile management, billed per location.',
-    brand: { '@type': 'Organization', name: 'ZoomLocal' },
-    offers: [
-      { '@type': 'Offer', name: 'Monthly', price: '3600', priceCurrency: 'INR', url: `${SITE_URL}/pricing` },
-      { '@type': 'Offer', name: 'Annual', price: '36500', priceCurrency: 'INR', url: `${SITE_URL}/pricing` },
-    ],
-  },
+  keywords: 'local seo pricing india, google business profile management cost, GMB management price, local seo packages india, managed local seo cost',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Managed Local SEO',
+      description: 'Done-for-you Google Business Profile management, billed per location.',
+      image: `${SITE_URL}/og-image.jpg`,
+      brand: { '@type': 'Organization', name: 'ZoomLocal' },
+      offers: [
+        { '@type': 'Offer', name: 'Monthly', price: '3600', priceCurrency: 'INR', url: `${SITE_URL}/pricing`, availability: 'https://schema.org/InStock' },
+        { '@type': 'Offer', name: 'Annual', price: '36500', priceCurrency: 'INR', url: `${SITE_URL}/pricing`, availability: 'https://schema.org/InStock' },
+      ],
+    },
+    faqLd(FAQ),
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Pricing', path: '/pricing' },
+    ]),
+  ],
 })
 </script>
 

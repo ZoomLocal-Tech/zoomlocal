@@ -1,7 +1,7 @@
 <script setup>
 import { Sparkles } from 'lucide-vue-next'
 import { toolsByCategory, TOOLS } from '../data/tools.js'
-import { useSeo, SITE_URL } from '../composables/useSeo.js'
+import { useSeo, SITE_URL, breadcrumbLd } from '../composables/useSeo.js'
 import ToolCard from '../components/ToolCard.vue'
 
 const groups = toolsByCategory()
@@ -11,17 +11,24 @@ useSeo({
   description:
     'Free white-label audit tools: Google Business Profile audit, website SEO audit, AI search visibility, review analysis, rank checker, AI content generators and more. Run any audit in seconds.',
   path: '/tools',
-  jsonLd: {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Free Marketing Audit Tools',
-    itemListElement: TOOLS.map((t, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: t.name,
-      url: `${SITE_URL}/tools/${t.slug}`,
-    })),
-  },
+  keywords: 'free local seo tools, google business profile audit free, marketing audit tools, white label seo tools, free seo checker',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Free Marketing Audit Tools',
+      itemListElement: TOOLS.map((t, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: t.name,
+        url: `${SITE_URL}/tools/${t.slug}`,
+      })),
+    },
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Free Tools', path: '/tools' },
+    ]),
+  ],
 })
 </script>
 
