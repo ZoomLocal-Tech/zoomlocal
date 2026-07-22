@@ -8,6 +8,7 @@ import {
 import { getToolBySlug, TOOLS } from '../data/tools.js'
 import { embedUrl } from '../config.js'
 import { useSeo, SITE_URL } from '../composables/useSeo.js'
+import { installHealthcareLeadCapture } from '../lib/healthcareLeadCapture.js'
 
 const route = useRoute()
 const tool = computed(() => getToolBySlug(route.params.slug))
@@ -79,7 +80,12 @@ function onMessage(e) {
 // mounts into a div by id. Inject it on the client only, and re-init on SPA
 // navigation between tool pages.
 let injected = null // { script, id }
+let leadCaptureTeardown = null // health widgets: forward completed leads
 function cleanupWidget() {
+  if (leadCaptureTeardown) {
+    leadCaptureTeardown()
+    leadCaptureTeardown = null
+  }
   if (!injected) return
   injected.script?.remove()
   const el = document.getElementById(injected.id)
@@ -97,6 +103,13 @@ function loadWidget() {
     s.async = true
     document.body.appendChild(s)
     injected = { script: s, id: w.id }
+    // Health self-test widgets (Smile/Hearing/Eye) never submit their lead;
+    // capture it from the widget's own fields and email the team.
+    const t = tool.value
+    if (t?.health && t?.slug) {
+      const container = document.getElementById(w.id)
+      if (container) leadCaptureTeardown = installHealthcareLeadCapture(container, t.slug)
+    }
   })
 }
 
