@@ -7,7 +7,7 @@ import {
 } from 'lucide-vue-next'
 import { getToolBySlug, TOOLS } from '../data/tools.js'
 import { embedUrl } from '../config.js'
-import { useSeo, SITE_URL } from '../composables/useSeo.js'
+import { useSeo, SITE_URL, breadcrumbLd, faqLd } from '../composables/useSeo.js'
 import { installHealthcareLeadCapture } from '../lib/healthcareLeadCapture.js'
 
 const route = useRoute()
@@ -31,20 +31,32 @@ const related = computed(() =>
 )
 
 if (tool.value) {
-  useSeo({
-    title: `${tool.value.name} (Free) | ZoomLocal`,
-    description: tool.value.description,
-    path: `/tools/${tool.value.slug}`,
-    jsonLd: {
+  const t = tool.value
+  const jsonLd = [
+    {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
-      name: tool.value.name,
+      name: t.name,
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
-      description: tool.value.description,
-      url: `${SITE_URL}/tools/${tool.value.slug}`,
+      description: t.description,
+      url: `${SITE_URL}/tools/${t.slug}`,
+      provider: { '@id': `${SITE_URL}/#organization` },
     },
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Free Tools', path: '/tools' },
+      { name: t.name, path: `/tools/${t.slug}` },
+    ]),
+  ]
+  if (t.faq?.length) jsonLd.push(faqLd(t.faq))
+  useSeo({
+    title: t.seoTitle ? `${t.seoTitle} | ZoomLocal` : `${t.name} (Free) | ZoomLocal`,
+    description: t.description,
+    path: `/tools/${t.slug}`,
+    keywords: t.keywords,
+    jsonLd,
   })
 }
 
@@ -224,6 +236,17 @@ watch(() => route.params.slug, loadWidget)
                 <span>{{ point }}</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <!-- ===== FAQ (rendered + FAQPage schema for AEO) ===== -->
+        <div v-if="tool.faq?.length" class="mx-auto mt-16 max-w-3xl" v-reveal>
+          <h2 class="mb-6 text-2xl font-black text-ink">Frequently asked questions</h2>
+          <div class="space-y-4">
+            <div v-for="(f, i) in tool.faq" :key="i" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 class="mb-2 font-bold text-ink">{{ f.q }}</h3>
+              <p class="text-sm leading-relaxed text-slate-600">{{ f.a }}</p>
+            </div>
           </div>
         </div>
 

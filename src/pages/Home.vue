@@ -105,8 +105,15 @@ const FAQ = [
   { q: 'How much does managed Local SEO cost?', a: 'It starts at ₹100 per day per location on the annual plan, or ₹120 per day per location billed monthly. Everything is included, with no hidden fees.' },
   { q: 'Do I have to share my Google password?', a: 'No. You grant access with a one-click secure Google authorization. We never see or store your password.' },
   { q: 'How is ZoomLocal different from doing it myself?', a: 'You could run the free audit tools yourself, but managed Local SEO means our experts do the ongoing work: responding to reviews, publishing posts, tracking rankings, protecting your profile and reporting, consistently, every week.' },
-  { q: 'Which cities and businesses do you work with?', a: 'We work with local businesses across India, restaurants, clinics, salons, retail, healthcare and service businesses, both single-location owners and multi-location brands.' },
+  { q: 'Which cities and businesses do you work with?', a: 'We work with local businesses across India — Mumbai, Pune, Delhi NCR, Bengaluru, Hyderabad, Chennai, Ahmedabad, Kolkata and beyond: restaurants, clinics, salons, retail, healthcare and service businesses, both single-location owners and multi-location brands.' },
+  { q: 'What is AEO (Answer Engine Optimization)?', a: 'AEO is optimizing your business to be the direct answer when people ask questions — in Google featured snippets, voice search and AI assistants. It relies on question-shaped content, FAQ sections and structured data (schema) so engines can quote you confidently.' },
+  { q: 'What is GEO (Generative Engine Optimization)?', a: 'GEO is optimizing your business to be cited and recommended inside AI-generated answers from ChatGPT, Gemini, Claude and Perplexity. These engines recommend businesses that are clearly described on sources they trust — your website, Google Business Profile, directories and reviews. ZoomLocal builds and maintains exactly that footprint.' },
+  { q: 'How long does Local SEO take to show results?', a: 'Most clients see measurable movement in 4–8 weeks — better local-pack positions, more profile views, more calls — with the strongest gains at the 3–6 month mark as reviews, content and ranking signals compound. Local SEO is compounding work, not a one-time switch.' },
 ]
+
+// Cities we actively serve — rendered on the page and fed to areaServed
+// schema so "local seo <city>" queries and AI engines connect us to them.
+const CITIES = ['Mumbai', 'Pune', 'Delhi NCR', 'Bengaluru', 'Hyderabad', 'Chennai', 'Ahmedabad', 'Kolkata', 'Jaipur', 'Surat', 'Nagpur', 'Kochi', 'Chandigarh', 'Lucknow', 'Indore', 'Nashik']
 
 const openFaq = ref(0)
 
@@ -131,13 +138,30 @@ useSeo({
     {
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
+      '@id': `${SITE_URL}/#service`,
       name: 'ZoomLocal, Managed Local SEO & Google Business Profile Management',
-      serviceType: 'Local SEO, Google Business Profile Management',
+      serviceType: 'Local SEO, Google Business Profile Management, AEO, GEO',
       url: SITE_URL,
-      areaServed: 'IN',
+      image: `${SITE_URL}/og-image.jpg`,
+      logo: `${SITE_URL}/zoomlocal-logo.png`,
+      parentOrganization: { '@id': `${SITE_URL}/#organization` },
+      areaServed: [
+        { '@type': 'Country', name: 'India' },
+        ...CITIES.map((c) => ({ '@type': 'City', name: c })),
+      ],
       priceRange: '₹₹',
       telephone: '+91-92703-62196',
       description: 'Done-for-you Google Business Profile management: reviews, rankings, content, protection and monthly reporting for local businesses.',
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'ZoomLocal Services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Business Profile Management', description: 'End-to-end GBP management: reviews, weekly posts, rank tracking, profile protection and monthly reporting. From ₹100/day per location.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AEO & GEO (AI Search Optimization)', description: 'Get found and recommended in ChatGPT, Gemini, Claude and Perplexity answers.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Development', description: 'Fast, SEO-ready websites built to convert local visitors into customers.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Management', description: 'Targeted local ad campaigns that drive calls, directions and leads.' } },
+        ],
+      },
     },
     {
       '@context': 'https://schema.org',
@@ -474,6 +498,19 @@ useSeo({
             <div v-show="openFaq === i" class="px-6 pb-5 -mt-1 text-slate-600 leading-relaxed">{{ f.a }}</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== CITIES SERVED ===================== -->
+    <section class="py-14">
+      <div class="container mx-auto px-4 max-w-4xl text-center" v-reveal>
+        <h2 class="text-2xl md:text-3xl font-black text-ink mb-3">Local SEO services across India</h2>
+        <p class="text-slate-600 leading-relaxed">
+          ZoomLocal manages Google Business Profiles for businesses in
+          <span class="font-semibold text-ink">{{ CITIES.join(', ') }}</span>
+          — and every city in between. Wherever your customers search
+          "near me", we make sure they find you first.
+        </p>
       </div>
     </section>
 

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { getPostBySlug } from '../data/posts.js'
-import { useSeo, SITE_URL, ORGANIZATION_SCHEMA } from '../composables/useSeo.js'
+import { useSeo, SITE_URL, ORGANIZATION_SCHEMA, DEFAULT_OG_IMAGE, breadcrumbLd } from '../composables/useSeo.js'
 
 const route = useRoute()
 const post = computed(() => getPostBySlug(route.params.slug))
@@ -17,17 +17,25 @@ if (post.value) {
     description: post.value.description,
     path: `/blog/${post.value.slug}`,
     type: 'article',
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: post.value.title,
-      description: post.value.description,
-      datePublished: post.value.date,
-      dateModified: post.value.date,
-      author: { '@type': 'Organization', name: post.value.author },
-      publisher: ORGANIZATION_SCHEMA,
-      mainEntityOfPage: `${SITE_URL}/blog/${post.value.slug}`,
-    },
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.value.title,
+        description: post.value.description,
+        image: DEFAULT_OG_IMAGE,
+        datePublished: post.value.date,
+        dateModified: post.value.updated || post.value.date,
+        author: { '@type': 'Organization', name: post.value.author, url: SITE_URL },
+        publisher: ORGANIZATION_SCHEMA,
+        mainEntityOfPage: `${SITE_URL}/blog/${post.value.slug}`,
+      },
+      breadcrumbLd([
+        { name: 'Home', path: '/' },
+        { name: 'Blog', path: '/blog' },
+        { name: post.value.title, path: `/blog/${post.value.slug}` },
+      ]),
+    ],
   })
 }
 </script>

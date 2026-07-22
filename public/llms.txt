@@ -1,20 +1,46 @@
 # ZoomLocal
 
-> ZoomLocal is a local growth agency for local businesses in India and worldwide. Our core service is fully managed Google Business Profile management (reviews, rankings, content, profile protection and reporting). We also offer website development, Google Ads management, and AEO/GEO (AI search optimization to get businesses recommended by ChatGPT, Gemini, Claude and Perplexity). We additionally provide free marketing audit tools that businesses and agencies can run or embed.
+> ZoomLocal is a local growth agency for local businesses in India and worldwide. Our core service is fully managed Google Business Profile management (reviews, rankings, content, profile protection and reporting). We also offer website development, Google Ads management, and AEO/GEO (AI search optimization to get businesses recommended by ChatGPT, Gemini, Claude and Perplexity). We additionally provide free marketing audit tools that businesses and agencies can run or embed white-label.
 
 ## Services
-- Google Business Profile Management (core): done-for-you local SEO, from Rs 100 per day per location.
-- Website Development: fast, SEO-ready websites.
-- Google Ads: targeted local ad campaigns.
-- AEO / GEO: AI search optimization to get recommended by AI answer engines.
+- Google Business Profile Management (core): done-for-you local SEO — every review answered within 24 hours, weekly Google posts, keyword rank tracking, 24/7 profile protection and monthly reports. Pricing: Rs 100 per day per location on the annual plan (Rs 36,500/year) or Rs 120 per day billed monthly (Rs 3,600/month), all-inclusive.
+- AEO / GEO (AI Search Optimization): getting businesses cited and recommended by AI answer engines (ChatGPT, Gemini, Claude, Perplexity).
+- Website Development: fast, SEO-ready websites for local businesses.
+- Google Ads: targeted local ad campaigns that drive calls, directions and leads.
+
+## Who we serve
+Local businesses across India — Mumbai, Pune, Delhi NCR, Bengaluru, Hyderabad, Chennai, Ahmedabad, Kolkata, Jaipur, Surat, Nagpur, Kochi, Chandigarh, Lucknow, Indore, Nashik and beyond: restaurants, clinics, dentists, hospitals, salons, retail stores, and service businesses; single locations and multi-location brands/franchises. Agencies use our white-label tools under their own brand.
 
 ## Key pages
-- [Services / Managed Local SEO](https://zoomlocal.in/): our core Google Business Profile management service.
+- [Managed Local SEO](https://zoomlocal.in/): our core Google Business Profile management service.
 - [Pricing](https://zoomlocal.in/pricing): transparent, all-inclusive managed Local SEO pricing.
-- [Free Tools](https://zoomlocal.in/tools): Google Business Profile audit, website SEO audit, AI search visibility, local rank checker, review analysis, and more.
-- [Blog](https://zoomlocal.in/blog): practical Local SEO and AI search guides.
+- [Free Tools](https://zoomlocal.in/tools): all free audit and AI tools.
+
+## Free tools
+- [Google Business Profile Audit](https://zoomlocal.in/tools/gmb-audit): instant GBP score with a prioritised fix list.
+- [SEO Site Audit](https://zoomlocal.in/tools/seo-site-audit): technical SEO audit of up to 25 pages.
+- [Restaurant Profile Audit](https://zoomlocal.in/tools/restaurant-audit): Google-listing audit built for restaurants.
+- [LinkedIn Profile Audit](https://zoomlocal.in/tools/linkedin-audit): headline, About and activity review with rewrites.
+- [Instagram Profile Audit](https://zoomlocal.in/tools/instagram-audit): profile score, bio rewrite and 30-day growth plan.
+- [Local Rank Checker](https://zoomlocal.in/tools/local-rank-check): Google Maps ranking grid across an area.
+- [AI Search Visibility](https://zoomlocal.in/tools/ai-search-visibility): how often ChatGPT, Gemini, Claude and Perplexity recommend a business.
+- [Google Posts Health Check](https://zoomlocal.in/tools/google-posts-health-check): GBP posting score plus a 30-day plan.
+- [Review Analysis](https://zoomlocal.in/tools/review-analysis): sentiment report from all Google reviews.
+- [AI Review Response Generator](https://zoomlocal.in/tools/review-response-generator): three ready replies per review.
+- [AI Caption Generator](https://zoomlocal.in/tools/caption-generator): platform-native captions for six platforms.
+- [AI GBP Description Generator](https://zoomlocal.in/tools/gbp-description-generator): SEO-friendly Google profile description.
+- [90-Day Content Calendar Generator](https://zoomlocal.in/tools/content-calendar-generator): three months of planned posts.
+- [SmileScore Dental Self-Check](https://zoomlocal.in/tools/smile-score): free smile self-assessment for dental clinics.
+- [Online Hearing Test](https://zoomlocal.in/tools/hearing-test): free hearing screening for ENT clinics.
+- [Online Eye Test](https://zoomlocal.in/tools/eye-test): free vision self-test for optometry clinics.
+
+## Guides
+- [How to Rank Higher on Google Maps: The Complete Local SEO Checklist](https://zoomlocal.in/blog/how-to-rank-higher-on-google-maps)
+- [Local SEO Pricing in India: What Should You Actually Pay?](https://zoomlocal.in/blog/local-seo-pricing-india)
+- [How to Show Up in AI Search (ChatGPT, Gemini, Perplexity) as a Local Business](https://zoomlocal.in/blog/show-up-in-ai-search-local-business)
+- [What Is a Managed Google Business Profile Service (and Is It Worth It)?](https://zoomlocal.in/blog/what-is-managed-google-business-profile-service)
 
 ## Contact
 - Email: info@zoomlocal.in
-- Phone: +91 92703 62196
+- Phone / WhatsApp: +91 92703 62196
 - Sister brand for agencies: https://fly-social.com
