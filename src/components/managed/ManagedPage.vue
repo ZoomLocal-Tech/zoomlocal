@@ -71,9 +71,9 @@ const MONTHLY_FEATURES = [
 const ANNUAL_FEATURES = ['Everything in Monthly plan', 'Priority support', 'Locked-in pricing', 'No monthly auto-debit hassle']
 
 const CLIENT_LOGOS = [
-  'c-1.png','c-2.png','c-3.png','c-4.png','c-5.png','c-6.png','c-7.png','c-8.png','c-9.png','c-10.png',
-  'c-11.png','c-12.png','c-14.png','c-15.png','c-16.png','c-18.png','c-19.svg','c-20.png','c-21.png',
-  'c-22.png','c-23.png','c-24.png','c-25.png','c-26.png',
+  'c-1.webp','c-2.webp','c-3.webp','c-4.webp','c-5.webp','c-6.webp','c-7.webp','c-8.webp','c-9.webp','c-10.webp',
+  'c-11.webp','c-12.webp','c-14.webp','c-15.webp','c-16.webp','c-18.webp','c-19.svg','c-20.webp','c-21.webp',
+  'c-22.webp','c-23.webp','c-24.webp','c-25.webp','c-26.webp',
 ].map((f) => `/lovable-uploads/${f}`)
 const LOGO_LOOP = [...CLIENT_LOGOS, ...CLIENT_LOGOS]
 

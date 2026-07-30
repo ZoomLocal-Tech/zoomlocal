@@ -96,7 +96,7 @@ const TESTIMONIALS = [
   { quote: 'We run four salon locations. ZoomLocal keeps every Google profile consistent, posts weekly, and sends one clean monthly report. It replaced an entire in-house effort.', name: 'Simran Kaur', role: 'Glow Studios, Chandigarh', color: '#8b5cf6' },
 ]
 
-const CLIENT_LOGOS = ['c-1.png','c-2.png','c-3.png','c-4.png','c-5.png','c-6.png','c-7.png','c-8.png','c-9.png','c-10.png','c-11.png','c-12.png','c-14.png','c-15.png','c-16.png','c-18.png','c-19.svg','c-20.png','c-21.png','c-22.png','c-23.png','c-24.png','c-25.png','c-26.png'].map((f) => `/lovable-uploads/${f}`)
+const CLIENT_LOGOS = ['c-1.webp','c-2.webp','c-3.webp','c-4.webp','c-5.webp','c-6.webp','c-7.webp','c-8.webp','c-9.webp','c-10.webp','c-11.webp','c-12.webp','c-14.webp','c-15.webp','c-16.webp','c-18.webp','c-19.svg','c-20.webp','c-21.webp','c-22.webp','c-23.webp','c-24.webp','c-25.webp','c-26.webp'].map((f) => `/lovable-uploads/${f}`)
 
 const WHATSAPP_URL = "https://wa.me/919270362196?text=Hi%2C%20I%27m%20interested%20in%20ZoomLocal%27s%20Managed%20Local%20SEO%20Services"
 
@@ -120,7 +120,7 @@ const openFaq = ref(0)
 useSeo({
   title: 'Local SEO, AEO & GEO Agency | Google Business Profile Management | ZoomLocal',
   description:
-    "ZoomLocal is a managed Local SEO, AEO and GEO agency. Our experts run your Google Business Profile end to end, reviews, rankings, content and reporting, and optimize you for AI answer engines (ChatGPT, Gemini, Perplexity), so you rank higher on Google Maps and get recommended by AI. From ₹100/day per location.",
+    'Managed Local SEO, AEO and GEO agency. We run your Google Business Profile end to end and get you recommended by ChatGPT, Gemini and Perplexity. From ₹100/day.',
   path: '/',
   jsonLd: [
     ORGANIZATION_SCHEMA,

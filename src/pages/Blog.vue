@@ -1,7 +1,7 @@
 <script setup>
 import { ArrowRight } from 'lucide-vue-next'
 import { POSTS } from '../data/posts.js'
-import { useSeo } from '../composables/useSeo.js'
+import { useSeo, SITE_URL } from '../composables/useSeo.js'
 
 function fmtDate(d) {
   return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
@@ -12,6 +12,23 @@ useSeo({
   description:
     'Practical guides on Local SEO, Google Business Profile, and getting recommended in AI search (ChatGPT, Gemini, Perplexity) for local businesses and marketing agencies.',
   path: '/blog',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${SITE_URL}/blog#blog`,
+    name: 'ZoomLocal Blog',
+    url: `${SITE_URL}/blog`,
+    description:
+      'Practical guides on Local SEO, Google Business Profile, and AI search visibility for local businesses and marketing agencies.',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    blogPost: POSTS.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: `${SITE_URL}/blog/${p.slug}`,
+      datePublished: p.date,
+      description: p.description,
+    })),
+  },
 })
 </script>
 
