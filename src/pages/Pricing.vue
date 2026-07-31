@@ -43,8 +43,8 @@ useSeo({
   <div class="pt-28 pb-24">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16" v-reveal>
-        <h1 class="text-4xl md:text-6xl font-black mb-4 text-white">Simple, Transparent Pricing</h1>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Everything included. No hidden fees. Our team handles your Google Business Profile end to end.</p>
+        <h1 class="text-4xl md:text-6xl font-black mb-4 text-slate-900">Simple, Transparent Pricing</h1>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto">Everything included. No hidden fees. Our team handles your Google Business Profile end to end.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -93,7 +93,7 @@ useSeo({
 
       <!-- FAQ -->
       <div class="max-w-3xl mx-auto mt-20" v-reveal>
-        <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-8">Pricing FAQ</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-8">Pricing FAQ</h2>
         <div class="space-y-4">
           <div v-for="(f, i) in FAQ" :key="i" class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6">
             <h3 class="text-white font-semibold mb-2">{{ f.q }}</h3>
