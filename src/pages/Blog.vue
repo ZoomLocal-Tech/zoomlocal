@@ -3,6 +3,9 @@ import { ArrowRight } from 'lucide-vue-next'
 import { POSTS } from '../data/posts.js'
 import { useSeo, SITE_URL } from '../composables/useSeo.js'
 
+// Newest first, regardless of array order in posts.js.
+const sortedPosts = [...POSTS].sort((a, b) => b.date.localeCompare(a.date))
+
 function fmtDate(d) {
   return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 }
@@ -41,7 +44,7 @@ useSeo({
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <RouterLink v-for="post in POSTS" :key="post.slug" :to="`/blog/${post.slug}`"
+        <RouterLink v-for="post in sortedPosts" :key="post.slug" :to="`/blog/${post.slug}`"
           class="group block bg-white border border-slate-200 hover:border-green-500/60 rounded-2xl p-7 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
           <div class="flex items-center gap-2 mb-3">
             <span v-for="tag in post.tags" :key="tag" class="text-[11px] px-2.5 py-1 rounded-full bg-green-50 text-green-700">{{ tag }}</span>
