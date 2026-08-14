@@ -35,6 +35,21 @@ if (post.value) {
         { name: 'Blog', path: '/blog' },
         { name: post.value.title, path: `/blog/${post.value.slug}` },
       ]),
+      // Posts ending in a real FAQ section declare it as `faqs`, so the questions
+      // are eligible for rich results instead of being plain markup in the body.
+      ...(post.value.faqs?.length
+        ? [
+            {
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: post.value.faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            },
+          ]
+        : []),
     ],
   })
 }
@@ -70,6 +85,7 @@ if (post.value) {
 
 <style scoped>
 .blog-body :deep(h2) { font-size: 1.5rem; font-weight: 700; color: #0f172a; margin: 2rem 0 0.75rem; }
+.blog-body :deep(h3) { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 1.5rem 0 0.5rem; }
 .blog-body :deep(p) { color: #475569; line-height: 1.75; margin-bottom: 1rem; }
 .blog-body :deep(ul) { color: #475569; margin: 0 0 1rem 1.25rem; list-style: disc; }
 .blog-body :deep(li) { margin-bottom: 0.5rem; line-height: 1.7; }
