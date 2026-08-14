@@ -22,6 +22,38 @@
   </head>
   <body>
     <div id="app"></div>
+    <!-- Fly first-party page counter. Reports the page address and whether
+         this is the visitor's first view today, so zoomlocal.in shows up in
+         the Website CMS Traffic tab alongside every site we manage. No
+         cookies and nothing personal; the counter follows the address because
+         this site changes pages without reloading. -->
+    <script>
+      (function () {
+        try {
+          var ENDPOINT = 'https://mvnifwlysiomcztpefar.supabase.co/functions/v1/website-analytics-track';
+          var last = null;
+          function send() {
+            try {
+              var path = location.pathname || '/';
+              if (path === last) return;
+              last = path;
+              var k = 'flyv_' + new Date().toISOString().slice(0, 10);
+              var n = false;
+              try { n = !localStorage.getItem(k); if (n) localStorage.setItem(k, '1'); } catch (e) {}
+              var body = JSON.stringify({ site: 'zoomlocal', path: path, nv: n });
+              if (navigator.sendBeacon) navigator.sendBeacon(ENDPOINT, body);
+              else fetch(ENDPOINT, { method: 'POST', body: body, keepalive: true }).catch(function () {});
+            } catch (e) {}
+          }
+          ['pushState', 'replaceState'].forEach(function (m) {
+            var orig = history[m];
+            history[m] = function () { var r = orig.apply(this, arguments); setTimeout(send, 0); return r; };
+          });
+          addEventListener('popstate', send);
+          send();
+        } catch (e) {}
+      })();
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
