@@ -118,7 +118,7 @@ const CITIES = ['Mumbai', 'Pune', 'Delhi NCR', 'Bengaluru', 'Hyderabad', 'Chenna
 const openFaq = ref(0)
 
 useSeo({
-  title: 'Local SEO, AEO & GEO Agency | Google Business Profile Management | ZoomLocal',
+  title: 'Google Business Profile Management & Local SEO | ZoomLocal',
   description:
     'Managed Local SEO, AEO and GEO agency. We run your Google Business Profile end to end and get you recommended by ChatGPT, Gemini and Perplexity. From ₹100/day.',
   path: '/',

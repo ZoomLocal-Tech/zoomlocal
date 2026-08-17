@@ -12,7 +12,7 @@ const FAQ = [
 ]
 
 useSeo({
-  title: 'Pricing | Managed Local SEO from ₹100/day per location | ZoomLocal',
+  title: 'Local SEO Pricing from ₹100/day per location | ZoomLocal',
   description:
     'Simple, all-inclusive managed Local SEO pricing. From ₹100/day per location on the annual plan or ₹120/day billed monthly. Everything handled by our experts.',
   path: '/pricing',

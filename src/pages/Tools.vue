@@ -9,7 +9,7 @@ const groups = toolsByCategory()
 useSeo({
   title: 'Free Local SEO & Marketing Audit Tools | ZoomLocal',
   description:
-    'Free white-label audit tools: Google Business Profile audit, website SEO audit, AI search visibility, review analysis, rank checker, AI content generators and more. Run any audit in seconds.',
+    'Free audit tools for any business: Google Business Profile, website SEO, AI search visibility, reviews, local rankings and AI content generators. Run one free.',
   path: '/tools',
   keywords: 'free local seo tools, google business profile audit free, marketing audit tools, white label seo tools, free seo checker',
   jsonLd: [

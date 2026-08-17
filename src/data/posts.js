@@ -5,8 +5,9 @@ export const POSTS = [
   {
     slug: 'google-business-profile-suspension',
     title: 'The Top 7 Reasons for Google Business Profile Suspension (And How to Avoid Them)',
+    seoTitle: '7 Reasons Google Business Profiles Get Suspended',
     description:
-      'Learn the main causes of Google Business Profile suspension and practical ways to avoid GMB suspension. Get your Google Business Profile back with our complete guide.',
+      "The seven most common reasons Google suspends a Business Profile, how to avoid each one, and what to do to get your listing back if it happens.",
     date: '2025-08-09',
     author: 'ZoomLocal',
     readingTime: '12 min',
@@ -77,7 +78,7 @@ export const POSTS = [
     slug: 'gmb-suspension-recovery-time',
     title: 'How Long Does GMB Suspension Recovery Take?',
     description:
-      'Discover the typical timelines for GMB suspension recovery, understand different suspension types, and learn the step-by-step process to submit a successful reinstatement request to Google.',
+      "How long a GMB suspension usually takes to resolve, how soft and hard suspensions differ, and the steps to file a reinstatement request Google accepts.",
     date: '2025-08-18',
     author: 'ZoomLocal',
     readingTime: '6 min',
@@ -128,8 +129,9 @@ export const POSTS = [
   {
     slug: 'posting-fake-reviews-keyword-stuffing',
     title: 'Posting Fake Reviews, Keyword Stuffing & Other Red Flags on the GMB',
+    seoTitle: 'Fake Reviews and Keyword Stuffing: GMB Red Flags',
     description:
-      'Learn about fake reviews, keyword stuffing, and other red flags that can lead to Google Business Profile suspension. Discover how to protect your GBP and maintain compliance with Google\'s guidelines.',
+      "Fake reviews, keyword stuffing and the other red flags that get a Google Business Profile suspended, plus how to keep your listing inside Google policy.",
     date: '2025-10-28',
     author: 'ZoomLocal',
     readingTime: '10 min',
@@ -216,8 +218,9 @@ export const POSTS = [
   {
     slug: 'updating-business-info-gmb-suspension',
     title: 'Why Updating Business Info on GMB Can Sometimes Lead to Suspension',
+    seoTitle: 'Why Updating GMB Info Can Trigger a Suspension',
     description:
-      'Learn why legitimate updates to your Google Business Profile can trigger suspension and how to safely update business info on GMB while avoiding policy violations.',
+      "Why genuine updates to your Google Business Profile can still trigger a suspension, and how to change business info on GMB without tripping Google filters.",
     date: '2025-10-30',
     author: 'ZoomLocal',
     readingTime: '8 min',
@@ -277,8 +280,9 @@ export const POSTS = [
   {
     slug: 'multiple-profiles-backfire',
     title: 'How Multiple Profiles for the Same Business Can Backfire',
+    seoTitle: 'Why Duplicate Google Business Profiles Backfire',
     description:
-      'Learn why creating multiple Google Business Profiles for the same business can lead to suspension and hurt your local SEO. Discover best practices to avoid duplicate listing issues.',
+      "Why more than one Google Business Profile for the same business leads to suspensions and split rankings, and how to clean up duplicate listings safely.",
     date: '2025-11-03',
     author: 'ZoomLocal',
     readingTime: '9 min',
@@ -338,8 +342,9 @@ export const POSTS = [
   {
     slug: 'gmb-reinstatement-request',
     title: 'How to File a GMB Reinstatement Request the Right Way',
+    seoTitle: 'How to File a GMB Reinstatement Request Correctly',
     description:
-      'Learn the step-by-step process to file a GMB reinstatement request correctly and recover your suspended Google Business Profile. Avoid common mistakes and maximize your chances of success.',
+      "The step-by-step way to file a GMB reinstatement request, the documents Google expects to see, and the common mistakes that get an appeal rejected.",
     date: '2025-11-05',
     author: 'ZoomLocal',
     readingTime: '10 min',
@@ -430,8 +435,9 @@ export const POSTS = [
   {
     slug: 'sample-appeal-template',
     title: 'Sample Appeal Template to Recover a Suspended Google Business Profile',
+    seoTitle: 'GMB Suspension Appeal Template You Can Copy',
     description:
-      'Get a ready-to-use Google Business Profile appeal template to recover your suspended GMB account. Learn how to file an effective GMB suspension appeal and get reinstated.',
+      "A ready-to-use appeal template for a suspended Google Business Profile, with the details to include and how to submit it so your listing is reinstated.",
     date: '2025-11-07',
     author: 'ZoomLocal',
     readingTime: '9 min',
@@ -497,8 +503,9 @@ export const POSTS = [
   {
     slug: 'gmb-reinstatement-denied',
     title: 'What to Do If Your GMB Reinstatement Request Gets Denied',
+    seoTitle: 'What to Do When a GMB Reinstatement Is Denied',
     description:
-      'Learn what to do when your Google Business Profile reinstatement request gets denied. Step-by-step guide to fix issues, strengthen your appeal, and avoid GMB suspension in the future.',
+      "What to do when Google denies your Business Profile reinstatement: how to find the real reason, fix it, and submit a stronger second appeal.",
     date: '2025-11-11',
     author: 'ZoomLocal',
     readingTime: '15 min',
@@ -572,8 +579,9 @@ export const POSTS = [
   {
     slug: 'gmb-account-suspension-prevention',
     title: 'The Ultimate Guide: How to Ensure Your GMB Account Won\'t Be Suspended',
+    seoTitle: 'How to Keep Your GMB Profile From Being Suspended',
     description:
-      'Don\'t let a sudden suspension ruin your local SEO strategy. Learn why Google Business Profiles get suspended and what you can do to keep your GBP account active, compliant, and ranked high.',
+      "Why Google Business Profiles get suspended and the habits that keep yours active: accurate details, careful edits, honest reviews and a real address.",
     date: '2025-11-24',
     author: 'ZoomLocal',
     readingTime: '12 min',
@@ -721,8 +729,9 @@ export const POSTS = [
   {
     slug: 'gmb-reinstatement-appeal-essentials',
     title: '5 Things to Include in Your GMB Reinstatement Appeal to Avoid Rejection',
+    seoTitle: '5 Things Every GMB Reinstatement Appeal Needs',
     description:
-      'Learn the 5 essential things to include in your GMB reinstatement appeal to avoid rejection. Expert tips to recover your suspended Google Business Profile successfully.',
+      "The five things to include in a GMB reinstatement appeal so it is not rejected, and how to present your evidence when you ask Google to restore it.",
     date: '2025-11-26',
     author: 'ZoomLocal',
     readingTime: '10 min',
@@ -792,8 +801,9 @@ export const POSTS = [
   {
     slug: 'gmb-reinstatement-delays-tips-workarounds',
     title: 'Dealing with GMB Reinstatement Delays: Tips & Workarounds',
+    seoTitle: 'GMB Reinstatement Delays: Tips and Workarounds',
     description:
-      'Facing GMB reinstatement delays? Learn why Google review timelines extend, how to fix delays, and smart workarounds to maintain Local SEO visibility during the wait.',
+      "Why Google reinstatement reviews run longer than expected, how to chase a stalled appeal, and how to hold on to local visibility while you wait.",
     date: '2025-11-28',
     author: 'ZoomLocal',
     readingTime: '8 min',
@@ -852,6 +862,7 @@ export const POSTS = [
   {
     slug: 'clinic-growth-digital-strategies',
     title: 'Five Proven Digital Strategies to Grow Your Clinic\'s Patient Flow',
+    seoTitle: '5 Digital Strategies to Grow Your Clinic',
     description:
       'Discover the Clinic Growth Blueprint: 5 digital strategies to grow your clinic\'s patient flow using Google Business Profile optimization and Local SEO.',
     date: '2025-11-28',
@@ -939,6 +950,7 @@ export const POSTS = [
   {
     slug: 'local-seo-checklist-clinic',
     title: '7-Step Local SEO Checklist to Rank Your Clinic on "Near Me" Searches',
+    seoTitle: '7-Step Local SEO Checklist to Rank Your Clinic',
     description:
       'Follow this 7-step Local SEO checklist to rank your clinic on Google near me searches. Optimize your Google Business Profile and dominate local search results.',
     date: '2025-11-29',
@@ -1030,8 +1042,9 @@ export const POSTS = [
   {
     slug: 'get-patients-gbp-roadmap',
     title: 'How to Get More Patients from Google Business Profile',
+    seoTitle: 'How to Get More Patients from Your Google Profile',
     description:
-      'Learn how to get more patients from Google Business Profile with this proven roadmap for clinics and doctors. Master Google Business Profile optimization and Local SEO strategies.',
+      "A roadmap for clinics and doctors to turn a Google Business Profile into patient enquiries, covering profile setup, reviews, photos, posts and rankings.",
     date: '2025-12-01',
     author: 'ZoomLocal',
     readingTime: '16 min',
@@ -1134,8 +1147,9 @@ export const POSTS = [
   {
     slug: 'gmb-maintenance-plan',
     title: 'Stop Losing Customers: Why Every Local Business Needs a GMB Maintenance Plan',
+    seoTitle: 'Why Your Business Needs a GMB Maintenance Plan',
     description:
-      'Discover why every local business needs a GMB maintenance plan for local SEO success. Learn how to maintain your GMB profile, manage reviews, and fight spam to dominate local search.',
+      "Why local businesses quietly lose customers without GMB upkeep, and what a maintenance plan covers: profile checks, review replies, posts and spam fighting.",
     date: '2025-12-03',
     author: 'ZoomLocal',
     readingTime: '14 min',
@@ -1213,8 +1227,9 @@ export const POSTS = [
   {
     slug: 'gmb-profile-audits',
     title: 'GMB Profile Audits: Catch Issues Before Google Does',
+    seoTitle: 'GMB Profile Audits: Catch Issues Before Google',
     description:
-      'Learn how to conduct a comprehensive GMB profile audit to protect your local SEO and avoid Google suspension. Expert guide to catching compliance issues before they hurt your local ranking.',
+      "How to run a full GMB profile audit, what to check on every listing, and how catching compliance issues early protects your rankings from a suspension.",
     date: '2025-12-08',
     author: 'ZoomLocal',
     readingTime: '12 min',
@@ -1275,8 +1290,9 @@ export const POSTS = [
   {
     slug: 'local-seo-services-complete-guide',
     title: 'Local SEO Services: The Complete Guide to Growing Your Local Business',
+    seoTitle: 'Local SEO Services: The Complete Guide',
     description:
-      'A complete guide to Local SEO for local businesses: how it works, why it matters, how Google ranks local results, and the steps to get found in Google Search and Google Maps.',
+      "A complete guide to local SEO: how it works, how Google ranks local results, and the steps that get your business found in Google Search and Google Maps.",
     date: '2026-07-31',
     author: 'ZoomLocal',
     readingTime: '8 min',
@@ -1357,8 +1373,9 @@ export const POSTS = [
   {
     slug: 'show-up-in-ai-search-local-business',
     title: 'How to Show Up in AI Search (ChatGPT, Gemini, Perplexity) as a Local Business',
+    seoTitle: 'How to Show Up in AI Search as a Local Business',
     description:
-      'AI assistants now recommend businesses directly. Here is a practical, step-by-step way for a local business to get mentioned in ChatGPT, Gemini, Claude and Perplexity.',
+      "AI assistants now recommend businesses directly. A practical, step-by-step way for a local business to get mentioned in ChatGPT, Gemini and Perplexity.",
     date: '2026-06-23',
     author: 'ZoomLocal',
     readingTime: '6 min',
@@ -1387,8 +1404,9 @@ export const POSTS = [
   {
     slug: 'what-is-managed-google-business-profile-service',
     title: 'What Is a Managed Google Business Profile Service (and Is It Worth It)?',
+    seoTitle: 'What Is a Managed Google Business Profile Service?',
     description:
-      'A managed Google Business Profile service means experts run your local SEO for you, reviews, posts, rankings, protection and reporting. Here is what is included and who it suits.',
+      "A managed Google Business Profile service means experts run your local SEO: reviews, posts, rankings, protection and reporting. What it covers and who it suits.",
     date: '2026-06-23',
     author: 'ZoomLocal',
     readingTime: '5 min',
@@ -1417,8 +1435,9 @@ export const POSTS = [
   {
     slug: 'how-to-rank-higher-on-google-maps',
     title: 'How to Rank Higher on Google Maps: The Complete Local SEO Checklist (2026)',
+    seoTitle: 'How to Rank Higher on Google Maps: 2026 Checklist',
     description:
-      'The exact checklist we use to move businesses into the Google Maps 3-pack: categories, reviews, posts, photos, citations and the AI-search signals that now matter.',
+      "The checklist we use to move businesses into the Google Maps 3-pack: categories, reviews, posts, photos, citations and the AI search signals that now count.",
     date: '2026-07-22',
     author: 'ZoomLocal',
     readingTime: '8 min',
@@ -1462,6 +1481,7 @@ export const POSTS = [
   {
     slug: 'local-seo-pricing-india',
     title: 'Local SEO Pricing in India (2026): What Should You Actually Pay?',
+    seoTitle: 'Local SEO Pricing in India: What Should You Pay?',
     description:
       'What local SEO costs in India in 2026, freelancers vs agencies vs managed services, what should be included at each price, and the red flags to avoid.',
     date: '2026-07-22',
@@ -1509,8 +1529,9 @@ export const POSTS = [
   {
     slug: 'local-seo-services-near-me',
     title: 'Local SEO Services Near Me: How the Right Strategy Helps Your Business Get Found Locally',
+    seoTitle: 'Local SEO Services Near Me: Get Found Locally',
     description:
-      'How local SEO services help nearby customers find your business on Google Search and Maps, and what a strategy built around your services and locations should cover.',
+      "How local SEO services help nearby customers find you on Google Search and Maps, and what a strategy built around your services and locations should cover.",
     date: '2026-08-14',
     author: 'ZoomLocal',
     readingTime: '7 min',
@@ -1609,6 +1630,7 @@ export const POSTS = [
   {
     slug: 'affordable-local-seo',
     title: 'Affordable Local SEO: How Small Businesses Can Improve Local Visibility Without Overspending',
+    seoTitle: 'Affordable Local SEO for Small Businesses',
     description:
       'Affordable local SEO is about spending your budget on the right things first. Where small businesses should start, and how to judge a low-cost SEO package.',
     date: '2026-08-14',
@@ -1712,8 +1734,9 @@ export const POSTS = [
   {
     slug: 'google-business-profile-ranking-factors',
     title: 'Google Business Profile Ranking Factors: What Helps Your Business Rank Higher on Google Maps?',
+    seoTitle: 'Google Business Profile Ranking Factors Explained',
     description:
-      'Google ranks local results on relevance, distance and prominence. What each one means in practice, and which parts of your profile and website actually influence them.',
+      "Google ranks local results on relevance, distance and prominence. What each one means in practice, and which parts of your profile and site influence them.",
     date: '2026-08-14',
     author: 'ZoomLocal',
     readingTime: '7 min',

@@ -13,7 +13,10 @@ function fmtDate(d) {
 
 if (post.value) {
   useSeo({
-    title: `${post.value.title} | ZoomLocal Blog`,
+    // `seoTitle` is the short search-result version of the headline; the long
+    // editorial `title` stays as the H1 on the page. Posts whose headline is
+    // already short enough do not set one.
+    title: `${post.value.seoTitle || post.value.title} | ZoomLocal`,
     description: post.value.description,
     path: `/blog/${post.value.slug}`,
     type: 'article',

@@ -11,9 +11,9 @@ function fmtDate(d) {
 }
 
 useSeo({
-  title: 'Blog | Local SEO & AI Search Tips for Businesses and Agencies | ZoomLocal',
+  title: 'Local SEO & AI Search Blog for Businesses | ZoomLocal',
   description:
-    'Practical guides on Local SEO, Google Business Profile, and getting recommended in AI search (ChatGPT, Gemini, Perplexity) for local businesses and marketing agencies.',
+    'Practical guides on local SEO, Google Business Profile and getting recommended in AI search, written for local businesses and the agencies that serve them.',
   path: '/blog',
   jsonLd: {
     '@context': 'https://schema.org',
