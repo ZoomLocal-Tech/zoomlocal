@@ -1,6 +1,9 @@
 import { writeFileSync } from 'node:fs'
 import { TOOLS } from '../src/data/tools.js'
-import { POSTS } from '../src/data/posts.js'
+// Both sources of articles, hand-written and published from the Fly CMS.
+// INDEXABLE_POSTS leaves out anything the CMS marked noindex: a page that asks
+// Google not to index it has no business being submitted in the sitemap.
+import { INDEXABLE_POSTS } from '../src/data/all-posts.js'
 
 const SITE = 'https://zoomlocal.in'
 
@@ -13,7 +16,9 @@ const entries = [
   { path: '/tools' },
   { path: '/blog' },
   ...TOOLS.map((t) => ({ path: `/tools/${t.slug}` })),
-  ...POSTS.map((p) => ({ path: `/blog/${p.slug}`, lastmod: p.date })),
+  // An article with no date would emit an empty <lastmod>, which is invalid, so
+  // it goes in without one rather than being dropped from the sitemap.
+  ...INDEXABLE_POSTS.map((p) => ({ path: `/blog/${p.slug}`, lastmod: p.date || '' })),
 ]
 
 const body = entries

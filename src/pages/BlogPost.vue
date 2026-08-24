@@ -1,14 +1,19 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { getPostBySlug } from '../data/posts.js'
+// Hand-written and CMS-published articles arrive here in the same shape, so
+// nothing below has to know which one it is holding.
+import { getPostBySlug } from '../data/all-posts.js'
 import { useSeo, SITE_URL, ORGANIZATION_SCHEMA, DEFAULT_OG_IMAGE, breadcrumbLd } from '../composables/useSeo.js'
 
 const route = useRoute()
 const post = computed(() => getPostBySlug(route.params.slug))
 
 function fmtDate(d) {
-  return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  if (!d) return ''
+  const parsed = new Date(d + 'T00:00:00')
+  if (Number.isNaN(parsed.getTime())) return ''
+  return parsed.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
 if (post.value) {
@@ -20,13 +25,21 @@ if (post.value) {
     description: post.value.description,
     path: `/blog/${post.value.slug}`,
     type: 'article',
+    // The article's own picture when it has one, so a CMS article shares with
+    // its own image instead of the site-wide default.
+    image: post.value.image || undefined,
+    // Both come from the CMS and are absent on every hand-written post, so the
+    // defaults reproduce exactly what this page did before: canonical is the
+    // page's own address, and no robots tag is emitted at all.
+    canonical: post.value.canonical || undefined,
+    robots: post.value.noindex ? 'noindex, follow' : undefined,
     jsonLd: [
       {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: post.value.title,
         description: post.value.description,
-        image: DEFAULT_OG_IMAGE,
+        image: post.value.image || DEFAULT_OG_IMAGE,
         datePublished: post.value.date,
         dateModified: post.value.updated || post.value.date,
         author: { '@type': 'Organization', name: post.value.author, url: SITE_URL },
@@ -40,6 +53,8 @@ if (post.value) {
       ]),
       // Posts ending in a real FAQ section declare it as `faqs`, so the questions
       // are eligible for rich results instead of being plain markup in the body.
+      // A CMS article carries them in its own Schema tab and arrives here the
+      // same way.
       ...(post.value.faqs?.length
         ? [
             {
@@ -66,7 +81,7 @@ if (post.value) {
         <span v-for="tag in post.tags" :key="tag" class="text-[11px] px-2.5 py-1 rounded-full bg-green-50 text-green-700">{{ tag }}</span>
       </div>
       <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-4">{{ post.title }}</h1>
-      <p class="text-slate-500 text-sm mb-10">{{ fmtDate(post.date) }} · {{ post.readingTime }} · {{ post.author }}</p>
+      <p class="text-slate-500 text-sm mb-10">{{ fmtDate(post.date) }}<template v-if="post.readingTime"> · {{ post.readingTime }}</template> · {{ post.author }}</p>
       <div class="blog-body" v-html="post.html" />
 
       <div class="mt-14 p-8 rounded-3xl bg-gradient-to-br from-green-600/15 to-emerald-600/10 border border-green-500/20 text-center">
@@ -94,4 +109,9 @@ if (post.value) {
 .blog-body :deep(li) { margin-bottom: 0.5rem; line-height: 1.7; }
 .blog-body :deep(strong) { color: #0f172a; }
 .blog-body :deep(a) { color: #059669; text-decoration: underline; }
+/* The CMS composes its own blocks (booking card, hours, map) into the article
+   body, and they arrive as markup with their own inline styling. Images are the
+   one thing that needs a rule here, so a wide featured picture cannot push the
+   article out of its column. */
+.blog-body :deep(img) { max-width: 100%; height: auto; }
 </style>

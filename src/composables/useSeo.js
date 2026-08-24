@@ -11,8 +11,25 @@ export const LOGO_URL = `${SITE_URL}/zoomlocal-logo.png`
  * Central SEO/AEO head helper. Sets title, meta description, canonical,
  * Open Graph + Twitter cards, and optional JSON-LD structured data so the
  * page is fully readable by Google and AI answer engines.
+ *
+ * `canonical` and `robots` exist for articles published from the Fly CMS, which
+ * can carry an explicit canonical URL (a piece syndicated from somewhere else)
+ * or be marked noindex. Both are optional and both default to exactly what this
+ * helper did before they existed: the canonical is the page's own address, and
+ * no robots tag is emitted at all, so every page that does not pass them is
+ * unchanged.
  */
-export function useSeo({ title, description, path = '/', image, type = 'website', jsonLd, keywords }) {
+export function useSeo({
+  title,
+  description,
+  path = '/',
+  image,
+  type = 'website',
+  jsonLd,
+  keywords,
+  canonical,
+  robots,
+}) {
   const url = `${SITE_URL}${path}`
   const ogImage = image || DEFAULT_OG_IMAGE
   const head = {
@@ -33,10 +50,13 @@ export function useSeo({ title, description, path = '/', image, type = 'website'
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: ogImage },
     ],
-    link: [{ rel: 'canonical', href: url }],
+    link: [{ rel: 'canonical', href: canonical || url }],
   }
   if (keywords) {
     head.meta.push({ name: 'keywords', content: keywords })
+  }
+  if (robots) {
+    head.meta.push({ name: 'robots', content: robots })
   }
   if (jsonLd) {
     const blocks = Array.isArray(jsonLd) ? jsonLd : [jsonLd]
