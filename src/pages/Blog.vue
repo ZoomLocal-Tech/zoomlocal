@@ -1,13 +1,17 @@
 <script setup>
 import { ArrowRight } from 'lucide-vue-next'
-import { POSTS } from '../data/posts.js'
+// Both sources of articles, hand-written and published from the Fly CMS, as one
+// list. all-posts.js already returns them newest first.
+import { POSTS } from '../data/all-posts.js'
 import { useSeo, SITE_URL } from '../composables/useSeo.js'
 
-// Newest first, regardless of array order in posts.js.
-const sortedPosts = [...POSTS].sort((a, b) => b.date.localeCompare(a.date))
+const sortedPosts = POSTS
 
 function fmtDate(d) {
-  return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  if (!d) return ''
+  const parsed = new Date(d + 'T00:00:00')
+  if (Number.isNaN(parsed.getTime())) return ''
+  return parsed.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 }
 
 useSeo({
@@ -24,7 +28,9 @@ useSeo({
     description:
       'Practical guides on Local SEO, Google Business Profile, and AI search visibility for local businesses and marketing agencies.',
     publisher: { '@id': `${SITE_URL}/#organization` },
-    blogPost: POSTS.map((p) => ({
+    // An article the CMS marked noindex is still listed and still readable; it
+    // is only kept out of the places that ask Google to index it.
+    blogPost: POSTS.filter((p) => !p.noindex).map((p) => ({
       '@type': 'BlogPosting',
       headline: p.title,
       url: `${SITE_URL}/blog/${p.slug}`,
@@ -52,7 +58,10 @@ useSeo({
           <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-green-600 transition-colors">{{ post.title }}</h2>
           <p class="text-slate-600 text-sm mb-4">{{ post.description }}</p>
           <div class="flex items-center justify-between text-xs text-slate-500">
-            <span>{{ fmtDate(post.date) }} · {{ post.readingTime }}</span>
+            <!-- An article written in the CMS may carry no reading time, so the
+                 separator is part of the piece it separates rather than a bullet
+                 left dangling after the date. -->
+            <span>{{ fmtDate(post.date) }}<template v-if="post.readingTime"> · {{ post.readingTime }}</template></span>
             <span class="inline-flex items-center text-green-600 group-hover:translate-x-1 transition-transform">Read <ArrowRight class="w-3.5 h-3.5 ml-1" /></span>
           </div>
         </RouterLink>

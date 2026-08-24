@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { Menu, X, ChevronDown, Phone } from 'lucide-vue-next'
 import { TOOLS } from '../../data/tools.js'
-import { POSTS } from '../../data/posts.js'
+import { POSTS } from '../../data/all-posts.js'
 
 const mobileOpen = ref(false)
 const openMenu = ref(null) // desktop hover dropdown
