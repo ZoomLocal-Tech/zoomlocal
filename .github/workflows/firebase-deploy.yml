@@ -43,3 +43,9 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZOOMLOCAL_77BE3 }}
           projectId: zoomlocal-77be3
           channelId: live
+          # Pinned (26 Oct 26): firebase-tools 15.34.1 first checks the Firebase
+          # Hosting API through serviceusage.services.get, which this service
+          # account is not granted, and every deploy failed with a 403 while
+          # 15.34.0 deployed fine on 21 Oct. Unpin once the account has the
+          # Service Usage Consumer role in project zoomlocal-77be3.
+          firebaseToolsVersion: 15.34.0
