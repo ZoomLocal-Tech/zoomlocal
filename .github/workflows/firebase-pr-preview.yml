@@ -40,3 +40,6 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZOOMLOCAL_77BE3 }}
           projectId: zoomlocal-77be3
           expires: 7d
+          # Pinned with the live deploy (firebase-deploy.yml): 15.34.1 needs
+          # serviceusage.services.get, which this service account lacks.
+          firebaseToolsVersion: 15.34.0
