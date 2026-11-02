@@ -5,9 +5,41 @@ import { useRoute } from 'vue-router'
 // nothing below has to know which one it is holding.
 import { getPostBySlug } from '../data/all-posts.js'
 import { useSeo, SITE_URL, ORGANIZATION_SCHEMA, DEFAULT_OG_IMAGE, breadcrumbLd } from '../composables/useSeo.js'
+import FlyAgentAd from '../components/FlyAgentAd.vue'
 
 const route = useRoute()
 const post = computed(() => getPostBySlug(route.params.slug))
+
+// The article body in three pieces, so the Fly Agent adverts can sit between
+// them: after the opening paragraph (the short answer stays first), and before a
+// heading about halfway down. A cut is only made where no block (div, list, table)
+// is left open, so a CMS block (booking card, hours, map) or a list is never split
+// in two; when no safe
+// place exists the advert is simply left out and the body stays whole.
+const BLOCKS = ['div', 'ul', 'ol', 'li', 'table', 'blockquote', 'section', 'figure']
+function balanced(html) {
+  return BLOCKS.every((tag) => {
+    const open = (html.match(new RegExp(`<${tag}[\\s>]`, 'g')) || []).length
+    const close = (html.match(new RegExp(`</${tag}>`, 'g')) || []).length
+    return open === close
+  })
+}
+const bodyParts = computed(() => {
+  const html = String(post.value?.html || '')
+  const firstP = html.indexOf('</p>')
+  const topAt = firstP >= 0 && balanced(html.slice(0, firstP + 4)) ? firstP + 4 : -1
+  const heads = [...html.matchAll(/<h2[\s>]/g)].map((m) => m.index).filter((i) => i > topAt)
+  let midAt = -1
+  if (heads.length >= 3) {
+    const order = [Math.floor(heads.length / 2), ...heads.map((_, k) => k)]
+    for (const k of order) {
+      if (heads[k] !== undefined && balanced(html.slice(0, heads[k]))) { midAt = heads[k]; break }
+    }
+  }
+  if (topAt < 0) return { a: '', b: midAt < 0 ? html : html.slice(0, midAt), c: midAt < 0 ? '' : html.slice(midAt) }
+  if (midAt < 0) return { a: html.slice(0, topAt), b: html.slice(topAt), c: '' }
+  return { a: html.slice(0, topAt), b: html.slice(topAt, midAt), c: html.slice(midAt) }
+})
 
 function fmtDate(d) {
   if (!d) return ''
@@ -82,7 +114,19 @@ if (post.value) {
       </div>
       <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-4">{{ post.title }}</h1>
       <p class="text-slate-500 text-sm mb-10">{{ fmtDate(post.date) }}<template v-if="post.readingTime"> · {{ post.readingTime }}</template> · {{ post.author }}</p>
-      <div class="blog-body" v-html="post.html" />
+      <div v-if="bodyParts.a" class="blog-body" v-html="bodyParts.a" />
+      <FlyAgentAd v-if="bodyParts.a" variant="top" :slug="post.slug" />
+      <div class="blog-body" v-html="bodyParts.b" />
+      <FlyAgentAd
+        v-if="bodyParts.c"
+        variant="mid"
+        :slug="post.slug"
+        :kicker="post.ad?.kicker"
+        :title="post.ad?.title"
+        :text="post.ad?.text"
+      />
+      <div v-if="bodyParts.c" class="blog-body" v-html="bodyParts.c" />
+      <FlyAgentAd variant="end" :slug="post.slug" />
 
       <div class="mt-14 p-8 rounded-3xl bg-gradient-to-br from-green-600/15 to-emerald-600/10 border border-green-500/20 text-center">
         <h2 class="text-2xl font-bold text-slate-900 mb-3">Want this handled for you?</h2>
@@ -106,6 +150,7 @@ if (post.value) {
 .blog-body :deep(h3) { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 1.5rem 0 0.5rem; }
 .blog-body :deep(p) { color: #475569; line-height: 1.75; margin-bottom: 1rem; }
 .blog-body :deep(ul) { color: #475569; margin: 0 0 1rem 1.25rem; list-style: disc; }
+.blog-body :deep(ol) { color: #475569; margin: 0 0 1rem 1.25rem; list-style: decimal; }
 .blog-body :deep(li) { margin-bottom: 0.5rem; line-height: 1.7; }
 .blog-body :deep(strong) { color: #0f172a; }
 .blog-body :deep(a) { color: #059669; text-decoration: underline; }
