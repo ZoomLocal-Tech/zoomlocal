@@ -27,8 +27,8 @@ export const POSTS = [
 <ol>
 <li><p><strong>Open Edit profile.</strong> Search Google for your business name while signed in to the Google account that manages the profile, and select Edit profile. In the Google Maps app, tap Business at the bottom right, then Edit profile.</p></li>
 <li><p><strong>Go to Special hours.</strong> Select Hours. In Business hours, next to Special hours, select Edit.</p></li>
-<li><p><strong>Pick the date.</strong> Google often lists upcoming public holidays; select Review to confirm one. For any other day, select Add a date and choose it in the date picker.</p></li>
-<li><p><strong>Choose Closed or your hours.</strong> If you are shut all day, keep Closed ticked. If you open, untick Closed and enter your opening and closing times.</p></li>
+<li><p><strong>Pick the date.</strong> Google often lists upcoming public holidays; select Review to confirm one, even if your hours that day are the same as usual, so customers can see they are accurate. For any other day, select Add a date and choose it in the date picker.</p></li>
+<li><p><strong>Choose Closed or your hours.</strong> If you are shut all day, keep Closed ticked. If you open, untick Closed and enter your opening and closing times. For a break in the day, for example closed for Lakshmi Puja and open again in the evening, select More, then Add hours, and enter the second set.</p></li>
 <li><p><strong>Add the other days.</strong> Repeat for every day that changes, such as the days around Diwali. Special hours replace that day's regular hours completely, so enter the whole day, not only the change.</p></li>
 <li><p><strong>Save and check.</strong> Select Save. The dates appear under Special hours in Edit profile, and customers see them on Search and Maps on those days.</p></li>
 </ol>
@@ -47,6 +47,8 @@ export const POSTS = [
 <p>Select Edit profile, then Hours. Change your regular week there, and use Special hours for single dates such as a festival, so your usual week stays as it is.</p>
 <h3>How long does it take to change opening hours on Google?</h3>
 <p>Google checks changes before they show and gives no fixed time, so set holiday hours a few days before the date rather than on the day.</p>
+<h3>Should I confirm Diwali hours if they are the same as usual?</h3>
+<p>Yes. Google suggests confirming your hours for official holidays even when they match your regular hours, so customers can see they are accurate.</p>
 <h3>Do special hours change my normal timings?</h3>
 <p>No. Special hours apply only to the dates you add. Your regular week stays as it is.</p>
 <p><em>Sources: Google Business Profile Help, <a href="https://support.google.com/business/answer/6303076" target="_blank" rel="noopener">How to set Special hours</a> and <a href="https://support.google.com/business/answer/3039617" target="_blank" rel="noopener">Edit your Business Profile</a>. For the full Diwali checklist (hours, offer post, photos and replies), see <a href="https://www.fly-social.com/guides/get-google-business-profile-ready-for-diwali" target="_blank" rel="noopener">how to get your Google Business Profile ready for Diwali</a>.</em></p>
@@ -59,6 +61,10 @@ export const POSTS = [
       {
         q: 'How long does it take to change opening hours on Google?',
         a: 'Google checks changes before they show and gives no fixed time, so set holiday hours a few days before the date rather than on the day.',
+      },
+      {
+        q: 'Should I confirm Diwali hours if they are the same as usual?',
+        a: 'Yes. Google suggests confirming your hours for official holidays even when they match your regular hours, so customers can see they are accurate.',
       },
       {
         q: 'Do special hours change my normal timings?',
