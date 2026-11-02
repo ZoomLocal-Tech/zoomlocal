@@ -3,6 +3,70 @@
 
 export const POSTS = [
   {
+    slug: 'set-diwali-holiday-hours-google-business-profile',
+    title: 'How to Set Diwali Holiday Hours on Google Business Profile (2026)',
+    seoTitle: 'Set Diwali Holiday Hours on Google Business Profile (2026)',
+    description:
+      'Diwali 2026 is on 8 November. Set special holiday hours on your Google Business Profile in a few steps so customers never reach a closed shutter.',
+    date: '2026-11-02',
+    author: 'ZoomLocal',
+    readingTime: '4 min',
+    tags: ['Google Business Profile', 'Holiday Hours', 'Diwali'],
+    // Words for the middle Fly Agent advert, matched to this article.
+    ad: {
+      kicker: 'Open on Diwali?',
+      title: 'Diwali hours on Google, set in one tap.',
+      text: 'Fly Agent asks about your holiday hours up to three weeks before Diwali and sets them on your Google profile once you tap.',
+    },
+    html: `
+<p><strong>Quick answer:</strong> Diwali 2026 is on Sunday, 8 November. To show your Diwali timings on Google, search your business name while signed in, select <strong>Edit profile</strong>, then <strong>Hours</strong>, and next to <strong>Special hours</strong> select <strong>Edit</strong>. Pick 8 November, keep <strong>Closed</strong> ticked or enter your hours, and select <strong>Save</strong>.</p>
+<p>Special hours are Google's name for holiday hours. They change what customers see on Google Search and Maps for that date only, so your usual week stays exactly as it is.</p>
+<h2>Why set your Diwali hours on Google?</h2>
+<p>In Diwali week people look up sweet shops, gift stores, clinics and salons on their phones and go wherever Google says is open. If Google still shows your normal timings, a customer can arrive at a closed shutter, or skip you because they guess you are shut. Special hours tell them the truth before they leave home.</p>
+<h2>How to set Diwali holiday hours on Google Business Profile</h2>
+<ol>
+<li><p><strong>Open Edit profile.</strong> Search Google for your business name while signed in to the Google account that manages the profile, and select Edit profile. In the Google Maps app, tap Business at the bottom right, then Edit profile.</p></li>
+<li><p><strong>Go to Special hours.</strong> Select Hours. In Business hours, next to Special hours, select Edit.</p></li>
+<li><p><strong>Pick the date.</strong> Google often lists upcoming public holidays; select Review to confirm one. For any other day, select Add a date and choose it in the date picker.</p></li>
+<li><p><strong>Choose Closed or your hours.</strong> If you are shut all day, keep Closed ticked. If you open, untick Closed and enter your opening and closing times.</p></li>
+<li><p><strong>Add the other days.</strong> Repeat for every day that changes, such as the days around Diwali. Special hours replace that day's regular hours completely, so enter the whole day, not only the change.</p></li>
+<li><p><strong>Save and check.</strong> Select Save. The dates appear under Special hours in Edit profile, and customers see them on Search and Maps on those days.</p></li>
+</ol>
+<h2>Can you set holiday hours from the Google Maps app?</h2>
+<p>Yes. Open the Google Maps app, tap Business at the bottom right, then Edit profile, then Hours. The same Special hours section is there.</p>
+<h2>What if you are closed for more than 6 days?</h2>
+<p>Special hours cover up to 6 days in a row. For a longer break, or one with no end date yet, mark the business Temporarily closed instead and reopen it when you are back.</p>
+<h2>What if your hours run past midnight?</h2>
+<p>One set of hours cannot run past midnight. If you stay open late on Diwali night, enter it as two entries, one for each day.</p>
+<h2>Why won't Google let you change your hours?</h2>
+<p>The usual reasons are signing in with an account that does not manage the profile, a profile that is not verified yet, or a business marked Temporarily closed. Special hours also need your regular hours set to Open with main hours first.</p>
+<h2>How early should you set your Diwali hours?</h2>
+<p>Google checks changes before they go live and gives no fixed time, so set your Diwali hours a few days before the festival rather than on the day itself.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I change my business hours in Google Business Profile?</h3>
+<p>Select Edit profile, then Hours. Change your regular week there, and use Special hours for single dates such as a festival, so your usual week stays as it is.</p>
+<h3>How long does it take to change opening hours on Google?</h3>
+<p>Google checks changes before they show and gives no fixed time, so set holiday hours a few days before the date rather than on the day.</p>
+<h3>Do special hours change my normal timings?</h3>
+<p>No. Special hours apply only to the dates you add. Your regular week stays as it is.</p>
+<p><em>Sources: Google Business Profile Help, <a href="https://support.google.com/business/answer/6303076" target="_blank" rel="noopener">How to set Special hours</a> and <a href="https://support.google.com/business/answer/3039617" target="_blank" rel="noopener">Edit your Business Profile</a>. For the full Diwali checklist (hours, offer post, photos and replies), see <a href="https://www.fly-social.com/guides/get-google-business-profile-ready-for-diwali" target="_blank" rel="noopener">how to get your Google Business Profile ready for Diwali</a>.</em></p>
+`,
+    faqs: [
+      {
+        q: 'How do I change my business hours in Google Business Profile?',
+        a: 'Select Edit profile, then Hours. Change your regular week there, and use Special hours for single dates such as a festival, so your usual week stays as it is.',
+      },
+      {
+        q: 'How long does it take to change opening hours on Google?',
+        a: 'Google checks changes before they show and gives no fixed time, so set holiday hours a few days before the date rather than on the day.',
+      },
+      {
+        q: 'Do special hours change my normal timings?',
+        a: 'No. Special hours apply only to the dates you add. Your regular week stays as it is.',
+      },
+    ],
+  },
+  {
     slug: 'google-business-profile-suspension',
     title: 'The Top 7 Reasons for Google Business Profile Suspension (And How to Avoid Them)',
     seoTitle: '7 Reasons Google Business Profiles Get Suspended',
