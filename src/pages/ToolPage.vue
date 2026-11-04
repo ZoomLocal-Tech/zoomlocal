@@ -183,7 +183,7 @@ watch(() => route.params.slug, loadWidget)
             <!-- the actual tool -->
             <iframe ref="iframeRef" :src="src" title="Free tool"
               class="rounded-2xl"
-              style="width:100%;height:800px;border:none;display:block;background:#fff;" allow="clipboard-write" />
+              style="width:100%;height:800px;border:none;display:block;background:#fff;" allow="clipboard-write; autoplay" />
           </div>
           <p class="mt-3 text-center text-sm text-slate-500">
             <Sparkles class="-mt-0.5 inline h-4 w-4" :style="{ color: cat.color }" /> This is the real, working tool — running live on ZoomLocal.
