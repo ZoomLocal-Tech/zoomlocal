@@ -74,6 +74,7 @@ const current = computed(() => TABS[active.value])
               class="absolute inset-0 h-full w-full border-0"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              allow="clipboard-write; autoplay"
             />
           </template>
         </div>
