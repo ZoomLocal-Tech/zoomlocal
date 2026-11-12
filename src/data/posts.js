@@ -3,6 +3,84 @@
 
 export const POSTS = [
   {
+    slug: 'list-business-on-chatgpt-india',
+    title: 'Can You List Your Shop or Clinic on ChatGPT from India Yet? (Business Hub, 2026)',
+    seoTitle: 'How to List Your Business on ChatGPT from India (2026)',
+    description:
+      'ChatGPT now lets owners claim their business in Business Hub. Local shops and clinics in India most likely cannot yet. What it does and what to do now.',
+    date: '2026-11-12',
+    author: 'ZoomLocal',
+    readingTime: '5 min',
+    tags: ['ChatGPT', 'AI Search', 'Google Business Profile'],
+    // Words for the middle Fly Agent advert, matched to this article.
+    ad: {
+      kicker: 'Waiting for ChatGPT?',
+      title: 'Keep the profile customers already use sharp.',
+      text: 'Fly Agent reads your new Google reviews every 15 minutes, drafts each reply in your voice and checks your rank around the shop every week.',
+    },
+    html: `
+<p><strong>Quick answer:</strong> On 10 November 2026 OpenAI launched Businesses in ChatGPT, in beta. In a dashboard called <strong>Business Hub</strong>, an owner can claim their business, keep its details up to date and see how often ChatGPT shows it. But OpenAI's own help page says local stores and restaurants can currently claim only an existing U.S. listing. So if you run a shop, salon or clinic in India, you will most likely not see a claim option yet. You can check in two minutes, and the time is better spent on the profile customers already use: Google.</p>
+<p>Here is what the feature does, who can use it today, and what is worth doing while you wait.</p>
+<h2>What is Business Hub in ChatGPT?</h2>
+<p>Business Hub is where a business manages how it appears in ChatGPT. OpenAI says the feature is meant to connect businesses with the 1.2 billion people who use ChatGPT each week. After you claim your business and pass verification, you can:</p>
+<ul>
+<li><p><strong>Edit your details:</strong> your website, business description, product or service category, logo, delivery and return policy, and a cover photo.</p></li>
+<li><p><strong>Add products:</strong> a product feed with prices and availability, if you sell products.</p></li>
+<li><p><strong>Read insights:</strong> mentions, website clicks and common topics from the past 28 days. For a local business, OpenAI counts a mention when ChatGPT shows a result for that location. You never see what people actually typed.</p></li>
+</ul>
+<p>There is also a <strong>Business Agent</strong>, a chat assistant that answers customer questions from your information. For now OpenAI offers it only to eligible ecommerce and online service businesses in the United States that have a website.</p>
+<h2>Can an Indian shop or clinic claim its business on ChatGPT?</h2>
+<p>Not yet, in most cases. OpenAI's help page says availability depends on the business's location and type, that an eligible online business may see an option to add itself, and that local stores and restaurants can currently claim only an existing U.S. listing.</p>
+<p>To check your own business, it takes a couple of minutes:</p>
+<ol>
+<li><p><strong>Open Business Hub.</strong> Sign in to ChatGPT and open Business Hub from the sidebar.</p></li>
+<li><p><strong>Search your name.</strong> Look for your business and select the listing that matches it.</p></li>
+<li><p><strong>Verify, if it lets you.</strong> OpenAI offers a business phone, business email, website domain or Shopify store as ways to prove the business is yours, then reviews the claim and emails you.</p></li>
+</ol>
+<p>To edit anything or see insights, you then complete an identity check with Persona, which may ask for a government ID, business registration and proof that you can represent the business. Only after that approval does the profile get its blue verified badge.</p>
+<h2>Will claiming my business make ChatGPT recommend it more?</h2>
+<p>No. OpenAI says plainly that claiming a profile does not change its visibility in ChatGPT, and that adding a product feed does not guarantee ChatGPT recommends your products. Claiming is also separate from advertising: you do not need an Ads account to claim.</p>
+<p>So be careful with anyone selling a "ChatGPT listing" that promises more customers. The claim itself is about keeping your information correct, not about ranking.</p>
+<h2>What should an Indian business do while it waits?</h2>
+<p>OpenAI's help page also says ChatGPT may use other sources when it answers questions about your business. You cannot control those sources directly, but you can make sure the places you do control say the right thing. For most shops and clinics in India, that starts with the Google Business Profile, which is what customers see on Google Search and Maps today.</p>
+<ul>
+<li><p><strong>Hours, including festival days.</strong> Keep your regular hours right and add Special hours for holidays, so nobody walks up to a closed shutter.</p></li>
+<li><p><strong>Services with a line each.</strong> Add every service you offer with a short description, so your profile matches what people search for.</p></li>
+<li><p><strong>One website address.</strong> Put the full address with https:// in the Website box, and only your one main site, not a page that redirects somewhere else.</p></li>
+<li><p><strong>Replies to reviews.</strong> Reply to every review, good or bad, with the person's name and what they mentioned.</p></li>
+</ul>
+<p>This is the part we work on at ZoomLocal. Our own product, Fly Agent, keeps the Google side current for you: it reads new reviews every 15 minutes and drafts each reply in your voice, keeps your posts going, and checks your rank on a 3 by 3 grid around your business every week. When OpenAI opens Business Hub to local businesses in India, we will write up the steps here.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I list my business on ChatGPT?</h3>
+<p>Sign in to ChatGPT, open Business Hub from the sidebar, search for your business and select its listing, then verify with a business phone, business email, website domain or Shopify store. OpenAI reviews the claim. Right now local stores and restaurants can claim only an existing U.S. listing.</p>
+<h3>Do I need to advertise on ChatGPT to claim my business?</h3>
+<p>No. OpenAI says claiming a business, publishing an agent and advertising are separate, and you do not need an Ads account to claim an eligible business.</p>
+<h3>Does claiming my business help it show up more in ChatGPT?</h3>
+<p>No. OpenAI says claiming a profile does not change its visibility in ChatGPT. It lets you correct your details and see insights.</p>
+<h3>Kya main apni dukaan ya clinic abhi ChatGPT par list kar sakta hoon?</h3>
+<p>Abhi ke liye OpenAI kehta hai ki local stores aur restaurants sirf existing U.S. listing claim kar sakte hain, isliye India ki dukaan ya clinic ke liye option shayad na dikhe. ChatGPT mein Business Hub kholkar apna naam search karke check kar lijiye, aur tab tak apna Google Business Profile aur website sahi rakhiye.</p>
+<p><em>Sources: OpenAI, <a href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener">Introducing Businesses in ChatGPT</a> (10 November 2026) and <a href="https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt" target="_blank" rel="noopener">Setting up your business on ChatGPT</a>. Google Business Profile Help, <a href="https://support.google.com/business/answer/6303076" target="_blank" rel="noopener">How to set Special hours</a> and <a href="https://support.google.com/business/answer/3039617" target="_blank" rel="noopener">Edit your Business Profile</a>. For the Google steps in full, see <a href="https://www.fly-social.com/guides/rank-higher-on-google-maps" target="_blank" rel="noopener">how to rank higher on Google Maps</a>.</em></p>
+`,
+    faqs: [
+      {
+        q: 'How do I list my business on ChatGPT?',
+        a: 'Sign in to ChatGPT, open Business Hub from the sidebar, search for your business and select its listing, then verify with a business phone, business email, website domain or Shopify store. OpenAI reviews the claim. Right now local stores and restaurants can claim only an existing U.S. listing.',
+      },
+      {
+        q: 'Do I need to advertise on ChatGPT to claim my business?',
+        a: 'No. OpenAI says claiming a business, publishing an agent and advertising are separate, and you do not need an Ads account to claim an eligible business.',
+      },
+      {
+        q: 'Does claiming my business help it show up more in ChatGPT?',
+        a: 'No. OpenAI says claiming a profile does not change its visibility in ChatGPT. It lets you correct your details and see insights.',
+      },
+      {
+        q: 'Kya main apni dukaan ya clinic abhi ChatGPT par list kar sakta hoon?',
+        a: 'Abhi ke liye OpenAI kehta hai ki local stores aur restaurants sirf existing U.S. listing claim kar sakte hain, isliye India ki dukaan ya clinic ke liye option shayad na dikhe. ChatGPT mein Business Hub kholkar apna naam search karke check kar lijiye, aur tab tak apna Google Business Profile aur website sahi rakhiye.',
+      },
+    ],
+  },
+  {
     slug: 'set-diwali-holiday-hours-google-business-profile',
     title: 'How to Set Diwali Holiday Hours on Google Business Profile (2026)',
     seoTitle: 'Set Diwali Holiday Hours on Google Business Profile (2026)',
