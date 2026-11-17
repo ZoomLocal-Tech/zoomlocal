@@ -3,6 +3,78 @@
 
 export const POSTS = [
   {
+    slug: 'google-review-reply-not-showing',
+    title: 'Why Your Google Review Reply Is Not Showing (and What to Do)',
+    seoTitle: 'Google Review Reply Not Showing? Why and What to Do (2026)',
+    description:
+      'Google checks every reply before it shows, usually within 10 minutes but sometimes up to 30 days. The reasons a reply stays hidden and what to fix.',
+    date: '2026-11-17',
+    author: 'ZoomLocal',
+    readingTime: '4 min',
+    tags: ['Google Reviews', 'Google Business Profile'],
+    // Words for the middle Fly Agent advert, matched to this article.
+    ad: {
+      kicker: 'Tired of checking on replies?',
+      title: 'Answer every review the same day, in your voice.',
+      text: 'Fly Agent reads new Google reviews every 15 minutes, drafts each reply in your tone, and holds replies to 1 and 2 star reviews for your yes.',
+    },
+    html: `
+<p><strong>Quick answer:</strong> Google checks every reply to a review against its content policies before anyone else can see it. Google says that usually takes up to 10 minutes, but it can take up to 30 days. If a reply breaks a policy, Google asks you to edit it instead of posting it. And you can only reply at all once your Business Profile is verified.</p>
+<p>Here are the four reasons a reply stays hidden, in the order worth checking, and what to do about each.</p>
+<h2>1. Your reply is still being checked</h2>
+<p>Every reply goes through Google's check before it is posted under the customer's review. Most are done within 10 minutes, and Google says a few can take up to 30 days. Once it is approved, the reply shows under the review as coming from your business, not from your personal name, and the customer gets a notification that you replied.</p>
+<p>So if you replied a few minutes ago, give it time and look again later.</p>
+<h2>2. Google asked you to edit it</h2>
+<p>If a reply is not approved, Google asks you to edit it. Open your profile, select <strong>Read reviews</strong>, find the review and look under it for your reply and the <strong>Edit</strong> option. Replies are checked against Google's content policy for Maps. Three parts of that policy are worth keeping in mind every time you reply:</p>
+<ul>
+<li><p><strong>Personal information.</strong> Google says not to post personal information without consent. Leave out the customer's phone number, address, bill details, and for a clinic anything about their treatment.</p></li>
+<li><p><strong>Advertising and links.</strong> Google wants contributions to reflect genuine experiences, and links to other websites are not allowed in reviews. Keep offers and links out of your reply too.</p></li>
+<li><p><strong>Off-topic or offensive words.</strong> Stay on what happened at your business, and stay polite even when the review is not.</p></li>
+</ul>
+<h2>3. Your profile is not verified, or your account cannot reply</h2>
+<p>Google says you must verify your business before you can reply to reviews. After that, the profile's owners and managers can respond. If you see no Reply option at all, check that the profile shows as verified and that the Google account you are signed in with is listed as an owner or manager. Our <a href="https://www.fly-social.com/guides/verify-google-business-profile">step by step guide to verifying a Google Business Profile</a> covers the first part.</p>
+<h2>4. Your reply is too long</h2>
+<p>Google's own developer documentation caps a reply at 4,096 bytes. In plain English that is up to 4,096 characters, far more than any reply needs. Hindi in Devanagari script takes 3 bytes a letter, so a Hindi reply holds roughly a third as many letters. A short reply is the better habit anyway.</p>
+<h2>How to write a reply that goes through the first time</h2>
+<ul>
+<li><p>Keep it short and calm, and thank them by name.</p></li>
+<li><p>Own the problem if there was one, without arguing the details in public.</p></li>
+<li><p>Leave out private details, phone numbers, links and offers.</p></li>
+<li><p>Offer a way to talk it over, such as asking them to call the shop.</p></li>
+</ul>
+<h2>Where Fly Agent fits</h2>
+<p>This is the part we work on at ZoomLocal. Our own product, Fly Agent, reads new Google reviews every 15 minutes and drafts each reply in your tone. Replies to reviews of 2 stars or lower wait for your yes, so nothing sensitive goes out without you. It works through Google's official API, and you can try it free for 14 days.</p>
+<h2>Frequently asked questions</h2>
+<h3>Why is my reply to a Google review not showing?</h3>
+<p>Google checks each reply against its content policies before it shows, usually within 10 minutes but sometimes up to 30 days. If the reply breaks a policy, for example by sharing personal information or a link, Google asks you to edit it. You also need a verified profile to reply at all.</p>
+<h3>How long does a Google review reply take to show?</h3>
+<p>Google says replies usually take up to 10 minutes to review, but sometimes up to 30 days. Once approved, the reply appears under the customer's review as coming from your business, and the customer is notified.</p>
+<h3>Is there a limit on how long a Google review reply can be?</h3>
+<p>Yes. Google's developer documentation caps a reply at 4,096 bytes. That is up to 4,096 characters in plain English, and roughly a third as many letters in Hindi script.</p>
+<h3>Google review ka reply kyun nahi dikh raha?</h3>
+<p>Google har reply ko pehle apni policy ke hisaab se check karta hai. Aam taur par yeh 10 minute mein ho jata hai, par kabhi kabhi 30 din tak lag sakte hain. Agar reply mein customer ka phone number, koi link ya offer ho, to Google aapse use edit karne ko kahega. Aur reply tabhi kar sakte hain jab aapka profile verified ho.</p>
+<p><em>Sources: Google Business Profile Help, <a href="https://support.google.com/business/answer/3474050" target="_blank" rel="noopener">Manage customer reviews</a> and <a href="https://support.google.com/business/answer/3403100" target="_blank" rel="noopener">owner and manager roles</a>; Google Maps Help, <a href="https://support.google.com/contributionpolicy/answer/7400114" target="_blank" rel="noopener">Prohibited and restricted content</a>; Google for Developers, <a href="https://developers.google.com/my-business/reference/rest/v4/accounts.locations.reviews" target="_blank" rel="noopener">Business Profile API reviews reference</a>. Read on 17 November 2026.</em></p>
+`,
+    faqs: [
+      {
+        q: 'Why is my reply to a Google review not showing?',
+        a: 'Google checks each reply against its content policies before it shows, usually within 10 minutes but sometimes up to 30 days. If the reply breaks a policy, for example by sharing personal information or a link, Google asks you to edit it. You also need a verified profile to reply at all.',
+      },
+      {
+        q: 'How long does a Google review reply take to show?',
+        a: "Google says replies usually take up to 10 minutes to review, but sometimes up to 30 days. Once approved, the reply appears under the customer's review as coming from your business, and the customer is notified.",
+      },
+      {
+        q: 'Is there a limit on how long a Google review reply can be?',
+        a: "Yes. Google's developer documentation caps a reply at 4,096 bytes. That is up to 4,096 characters in plain English, and roughly a third as many letters in Hindi script.",
+      },
+      {
+        q: 'Google review ka reply kyun nahi dikh raha?',
+        a: 'Google har reply ko pehle apni policy ke hisaab se check karta hai. Aam taur par yeh 10 minute mein ho jata hai, par kabhi kabhi 30 din tak lag sakte hain. Agar reply mein customer ka phone number, koi link ya offer ho, to Google aapse use edit karne ko kahega. Aur reply tabhi kar sakte hain jab aapka profile verified ho.',
+      },
+    ],
+  },
+  {
     slug: 'list-business-on-chatgpt-india',
     title: 'Can You List Your Shop or Clinic on ChatGPT from India Yet? (Business Hub, 2026)',
     seoTitle: 'How to List Your Business on ChatGPT from India (2026)',
