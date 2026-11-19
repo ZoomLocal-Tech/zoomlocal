@@ -156,6 +156,83 @@ export const POSTS = [
     ],
   },
   {
+    slug: 'google-business-profile-without-address',
+    title: 'No Shop Address? How to Put Your Home or On-Site Business on Google',
+    seoTitle: 'Google Business Profile Without an Address: Service Area Setup (2026)',
+    description:
+      'You do not need a shop to be on Google. If you visit or deliver to customers, set up a service-area profile, hide your address and add up to 20 areas.',
+    date: '2026-11-19',
+    author: 'ZoomLocal',
+    readingTime: '5 min',
+    tags: ['Google Business Profile', 'Service Area Business'],
+    // Words for the middle Fly Agent advert, matched to this article.
+    ad: {
+      kicker: 'Always on the road?',
+      title: 'Let your Google profile run while you are at the job.',
+      text: 'Fly Agent checks your profile every 4 hours, drafts every review reply in your tone and schedules a month of posts, so customers in your area keep finding you.',
+    },
+    html: `
+<p><strong>Quick answer:</strong> Yes, you can be on Google without a shop. Google calls it a service-area business: you visit or deliver to customers, and they do not come to you. Set up your Business Profile as usual, turn off <em>Show business address to customers</em>, and add the areas you serve, up to 20 of them. Customers then see your areas, not your home address.</p>
+<p>This suits a lot of Indian businesses that work from home or on site: electricians, plumbers, AC and appliance repair, pest control, home tutors, caterers, cake makers who deliver, and doctors or physiotherapists who do home visits.</p>
+<h2>Who counts as a service-area business</h2>
+<p>Google's own definition is a business that "visits or delivers to customers directly but doesn't serve customers at their business address." If customers also come to your place, you are what Google calls a hybrid business, and you keep both your address and your service areas.</p>
+<p>One exception: businesses selling things with an age limit, such as alcohol, need a storefront.</p>
+<h2>How to hide your address</h2>
+<ol>
+<li><p>Open your profile at business.google.com and select <strong>Edit profile</strong>, then <strong>Location</strong>.</p></li>
+<li><p>Next to <strong>Business location</strong>, select <strong>Edit</strong>.</p></li>
+<li><p>Turn off <strong>Show business address to customers</strong> and select <strong>Save</strong>.</p></li>
+</ol>
+<p>Your profile then shows only your service area. If you have not added one yet, Google picks a local area for you, so add your own straight after. Google is clear that you should hide the address only if you really do not serve customers there.</p>
+<h2>How to add your service areas</h2>
+<ol>
+<li><p>In <strong>Edit profile</strong>, then <strong>Location</strong>, select <strong>Edit</strong> next to <strong>Service area</strong>.</p></li>
+<li><p>Pick a suggested area or type one in. You can add up to 20, as cities, PIN codes or other areas.</p></li>
+<li><p>Select <strong>Save</strong>.</p></li>
+</ol>
+<p>Two limits to know. You cannot set a radius around your home, and the whole area should not be more than about 2 hours of driving from where you are based. Google says approved changes can take up to 48 hours to show.</p>
+<h2>Addresses Google does not accept</h2>
+<ul>
+<li><p>A P.O. box or a mailbox at some other place.</p></li>
+<li><p>A rented mailing address where you do not actually work.</p></li>
+<li><p>A "virtual" office, unless someone works there during your business hours.</p></li>
+</ul>
+<p>Google also allows one service-area profile per business, so do not make a second profile for the next town. Add that town as a service area instead.</p>
+<h2>Verification without a shop</h2>
+<p>You still verify the profile, using the option Google offers you. If that is a video, you do not need a signboard. Film the landmarks near where you work, your tools or equipment, and a job you have finished, in one live, unedited recording made through the profile. If it is rejected, the profile shows <strong>Review issues</strong>, which tells you what to add next time.</p>
+<h2>Where Fly Agent fits</h2>
+<p>This is the part we work on at ZoomLocal. Our own product, Fly Agent, looks after the profile once it is set up: it checks it every 4 hours, drafts a reply to every review in your tone (replies to 1 and 2 star reviews wait for your yes), and schedules a month of posts in your own frame. For a business that is out on jobs all day, that keeps the profile alive without you opening it. It is free for 14 days.</p>
+<h2>Frequently asked questions</h2>
+<h3>Can I create a Google Business Profile without an address?</h3>
+<p>Yes, if you visit or deliver to your customers. Google treats you as a service-area business: you hide your address and show the areas you serve instead, up to 20 of them.</p>
+<h3>How do I hide my home address on Google Business Profile?</h3>
+<p>Select Edit profile, then Location. Next to Business location, select Edit, turn off Show business address to customers, and save. Your profile then shows only your service area.</p>
+<h3>How far can my service area go?</h3>
+<p>Google says the whole area should not be more than about 2 hours of driving from where your business is based, and you cannot set it as a radius. Add cities or PIN codes instead.</p>
+<h3>Ghar se business chalta hai, kya Google par aa sakte hain?</h3>
+<p>Haan. Agar aap customer ke ghar jaate hain ya delivery karte hain, to Google Business Profile bana sakte hain. Edit profile, phir Location mein Show business address to customers band kar dijiye, aur jin areas mein kaam karte hain, woh add kar dijiye. Aapka ghar ka address customers ko nahi dikhega.</p>
+<p><em>Sources: Google Business Profile Help, <a href="https://support.google.com/business/answer/9157481" target="_blank" rel="noopener">Manage your service areas for service-area &amp; hybrid businesses</a>, <a href="https://support.google.com/business/answer/2853879" target="_blank" rel="noopener">Manage your business address</a> and <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Guidelines for representing your business on Google</a>.</em></p>
+`,
+    faqs: [
+      {
+        q: 'Can I create a Google Business Profile without an address?',
+        a: 'Yes, if you visit or deliver to your customers. Google treats you as a service-area business: you hide your address and show the areas you serve instead, up to 20 of them.',
+      },
+      {
+        q: 'How do I hide my home address on Google Business Profile?',
+        a: 'Select Edit profile, then Location. Next to Business location, select Edit, turn off Show business address to customers, and save. Your profile then shows only your service area.',
+      },
+      {
+        q: 'How far can my service area go?',
+        a: 'Google says the whole area should not be more than about 2 hours of driving from where your business is based, and you cannot set it as a radius. Add cities or PIN codes instead.',
+      },
+      {
+        q: 'Ghar se business chalta hai, kya Google par aa sakte hain?',
+        a: 'Haan. Agar aap customer ke ghar jaate hain ya delivery karte hain, to Google Business Profile bana sakte hain. Edit profile, phir Location mein Show business address to customers band kar dijiye, aur jin areas mein kaam karte hain, woh add kar dijiye. Aapka ghar ka address customers ko nahi dikhega.',
+      },
+    ],
+  },
+  {
     slug: 'google-review-reply-not-showing',
     title: 'Why Your Google Review Reply Is Not Showing (and What to Do)',
     seoTitle: 'Google Review Reply Not Showing? Why and What to Do (2026)',
