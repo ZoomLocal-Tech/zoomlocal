@@ -78,6 +78,84 @@ export const POSTS = [
     ],
   },
   {
+    slug: 'change-business-name-google',
+    title: 'How to Change Your Business Name on Google (and Why the New Name Is Not Showing)',
+    seoTitle: 'Change Business Name on Google Business Profile: Steps and Fixes (2026)',
+    description:
+      'Edit profile, change Business name, Save. Google reviews the edit first and may ask you to verify again. When a new name counts as a new business, and why it is not showing.',
+    date: '2026-11-24',
+    author: 'ZoomLocal',
+    readingTime: '5 min',
+    tags: ['Google Business Profile'],
+    // Words for the middle Fly Agent advert, matched to this article.
+    ad: {
+      kicker: 'Renamed the shop?',
+      title: 'Keep your Google profile in step with your signboard.',
+      text: 'If someone outside changes your business name, phone, website, description or hours, Fly Agent notifies you and can put it right back.',
+    },
+    html: `
+<p><strong>Quick answer:</strong> Sign in with the Google account that manages your profile, search for your business, select <strong>Edit profile</strong>, change the <strong>Business name</strong> and select <strong>Save</strong>. Google reviews every edit before it goes live, and if you change the name of a profile that is already verified, Google says you might need to verify it again. A small change keeps the same profile. A completely new name counts as a new business, and Google asks you to close the old profile and create a new one.</p>
+<p>Here is how to tell which case you are in, what the new name may contain, and why a name change often does not show.</p>
+<h2>How to change the name</h2>
+<p>On a computer or phone browser:</p>
+<ol>
+<li><p>Sign in to the Google account linked to your Business Profile.</p></li>
+<li><p>Search Google for your business and open your profile.</p></li>
+<li><p>Select <strong>Edit profile</strong>, change <strong>Business name</strong> and select <strong>Save</strong>.</p></li>
+</ol>
+<p>In the Google Maps app, tap <strong>Business</strong> at the bottom right, then <strong>Edit profile</strong>, change the name and tap <strong>Save</strong>.</p>
+<p>Type the name exactly as it appears on your signboard, bills and other branding. Google asks for the real-world name customers know you by.</p>
+<h2>Small change or new business? Google's rebranding rule</h2>
+<p>Google calls an allowed name change on the same profile a <strong>rebrand</strong>. Your profile may qualify when it is a minor change, the proper nouns and the services described in the name stay the same, and your business category stays the same. A business with several locations that changes its name may also qualify.</p>
+<p>If your change fits, you simply edit the name as above. If it does not, Google treats it as a new business: you mark the existing profile as closed and create a new profile under the new name. If you are not sure which side your change falls on, Google points you to its support team and the Business Profile Community.</p>
+<h2>What the new name can and cannot include</h2>
+<p>Google says extra information in a business name is not permitted and could get your profile suspended. Leave these out:</p>
+<ul>
+<li><p>Taglines, like "best in town" or "since 1990".</p></li>
+<li><p>Branch or store codes.</p></li>
+<li><p>Trademark signs such as ®.</p></li>
+<li><p>Words in all capitals, unless your brand is really written that way.</p></li>
+<li><p>Hours, like "Open 24 hours".</p></li>
+<li><p>Phone numbers or website addresses.</p></li>
+<li><p>Special characters and legal terms like LLP or Pvt Ltd, unless you can show them on real signage, cards or bills.</p></li>
+</ul>
+<p>Your area and your services belong in their own fields on the profile, not in the name.</p>
+<h2>Why your new name is not showing</h2>
+<h3>1. Google is still reviewing it</h3>
+<p>Google reviews changes before they go live on your profile. Until then, customers keep seeing the old name.</p>
+<h3>2. Google wants you to verify again</h3>
+<p>Changing the name of a verified profile can bring back a verification step. Open your profile and look for a prompt to verify, then follow the option Google offers.</p>
+<h3>3. The name breaks the rules above</h3>
+<p>A name with a tagline, your area or a list of services is the classic case. Change it to the plain name on your board.</p>
+<h3>4. Your signboard still shows the old name</h3>
+<p>Google wants the same name on your storefront, website and stationery. Businesses that show their address should have a permanent sign with their name at that address. Update the sign first, then the profile.</p>
+<h3>5. The change counts as a new business</h3>
+<p>If the proper nouns, the services in the name or the category change, the rebrand route does not apply. Close the old profile and create a new one, as Google describes.</p>
+<h2>Will I lose my reviews?</h2>
+<p>A rebrand is, in Google's own definition, a name change without creating a new profile, so you keep the same profile you have now. A new profile is a separate listing, and Google's help pages do not say the old profile's reviews move across to it. If your reviews matter to you, check first whether your change fits the rebrand rule.</p>
+<h2>Where Fly Agent fits</h2>
+<p>This is the part we work on at ZoomLocal. Our own product, Fly Agent, watches your Google profile. If someone outside changes your business name, phone number, website, description or opening hours, it notifies you and puts the change back. On the mode where Fly does it all that happens by itself; on the other modes you switch it on in settings or tap Roll back on the card. You can try it free for 14 days.</p>
+`,
+    faqs: [
+      {
+        q: 'Can I change my business name on Google Business Profile?',
+        a: 'Yes. Sign in with the account that manages the profile, open it, select Edit profile, change Business name and Save. Google reviews the edit before it goes live and may ask you to verify again if the profile was already verified.',
+      },
+      {
+        q: "Why can't I change my business name on Google?",
+        a: 'The edit may still be under review, Google may want you to verify again, the new name may include things Google does not allow such as taglines or phone numbers, or the change may count as a new business, in which case Google asks you to close the old profile and create a new one.',
+      },
+      {
+        q: 'Will I lose my Google reviews if I change my business name?',
+        a: "A rebrand keeps the same profile, because Google defines it as a name change without creating a new profile. If the change counts as a new business, you create a separate profile, and Google's help pages do not say the old reviews move to it.",
+      },
+      {
+        q: 'Google Business Profile ka naam kaise badlein?',
+        a: 'Apne Google account se sign in kijiye, apni profile kholiye, Edit profile chuniye, Business name badaliye aur Save kijiye. Naam wahi rakhiye jo board par likha hai. Google pehle edit check karta hai, aur verified profile par dobara verify karne ko keh sakta hai.',
+      },
+    ],
+  },
+  {
     slug: 'google-review-reply-not-showing',
     title: 'Why Your Google Review Reply Is Not Showing (and What to Do)',
     seoTitle: 'Google Review Reply Not Showing? Why and What to Do (2026)',
