@@ -3,6 +3,81 @@
 
 export const POSTS = [
   {
+    slug: 'google-business-temporarily-closed',
+    title: 'Google Shows Your Business as Temporarily Closed? Why, and How to Reopen It',
+    seoTitle: 'Business Showing Temporarily Closed on Google? How to Fix It (2026)',
+    description:
+      'Why Google can show your shop or clinic as Temporarily closed, how to reopen it from your profile in a minute, and when to use the label yourself.',
+    date: '2026-11-26',
+    author: 'ZoomLocal',
+    readingTime: '4 min',
+    tags: ['Google Business Profile', 'Google Maps'],
+    // Words for the middle Fly Agent advert, matched to this article.
+    ad: {
+      kicker: 'Closing for a festival?',
+      title: 'Fly Agent asks first, then sets the day on Google.',
+      text: 'Up to three weeks before each big festival, Fly Agent asks whether you are open. Tap Closed or Open, and it sets that day as special hours on your Google profile.',
+    },
+    html: `
+<p><strong>Quick answer:</strong> Your profile says "Temporarily closed" when that status was set on it, either by someone who manages the profile or after Google got an update that you were closed. To fix it, open your Business Profile, choose Edit profile, then Hours, and pick Open with main hours. Set your days and times and save. Google reviews edits before they go live, so the label can take a little time to clear.</p>
+<p>Below: why the label appears, how to remove it, when you should use it yourself, and the one case where you should not reopen at all.</p>
+<h2>Why Google shows your business as temporarily closed</h2>
+<p>There are two ways the label gets there, and both come from Google's own help pages.</p>
+<ul>
+<li><strong>Someone on your profile set it.</strong> An owner or manager may have chosen Temporarily closed during a renovation, a long break or the off-season, and nobody switched it back.</li>
+<li><strong>Google got an update that you were closed.</strong> On Google Maps, anyone who knows a place can suggest that it is temporarily closed, and Google says that feedback helps it decide whether to change a place's status. Google also says that when it receives an update that a location is temporarily closed, the owner may get an email about it.</li>
+</ul>
+<p>So if you did not set it yourself, check your email for a note from Google, and ask anyone else who manages the profile.</p>
+<h2>How to reopen your business on Google</h2>
+<ol>
+<li>Open your Business Profile on Google Search or Maps, signed in to the Google account linked to it.</li>
+<li>Select <strong>Edit profile</strong>, then <strong>Hours</strong>.</li>
+<li>In the Business hours section, next to Hours, select Edit and choose <strong>Open with main hours</strong>. If you do not want hours to show, choose Open with no main hours and save.</li>
+<li>Tick each day you are open, set the times, and select <strong>Save</strong>.</li>
+</ol>
+<p>Once it goes through, Google says your profile is no longer marked temporarily or permanently closed on Maps and Search. If you run several branches, Business Profile Manager lets you select them all, then choose Actions and Open.</p>
+<h2>The one case where you should not reopen</h2>
+<p>If your business was marked permanently closed because you moved or changed your name, Google says not to reopen it. Add a new Business Profile instead and verify it. Google says that if you want your reviews moved to the new profile, you contact Google for help.</p>
+<h2>When to mark your business temporarily closed yourself</h2>
+<p>Google's rule is simple. Closed for more than 7 days, closed for the off-season, or closed with no end date: use Temporarily closed. Closed for 7 days or less, such as a festival or a short holiday: set Special hours for those days instead. To set it, go to Edit profile, then Hours, select Edit next to Hours, choose Temporarily closed and save.</p>
+<p>Google gives a reason to use it rather than going quiet: people who search for you by name see that the closure is only for now, so they do not make a wasted trip to a shut door.</p>
+<h2>Does temporarily closed hurt your ranking?</h2>
+<p>It can, while the label is on. Google says that for broad searches, temporarily closed businesses can rank after open ones, and that the effect depends on things like your category, the kind of search, and how many similar businesses are also closed. That is why the label suits a real long break and not a short one, and why you should switch it off on the day you reopen.</p>
+<h2>Temporarily closed or permanently closed?</h2>
+<p>Temporarily closed says you will be back. Permanently closed says the business has shut for good. Google says a permanently closed profile can still appear when people search for it, and it clearly shows that the business is closed. Never use permanently closed for a pause.</p>
+<h2>Where Fly Agent fits</h2>
+<p>This is the part we work on at ZoomLocal. Our own product, Fly Agent, asks you up to three weeks before each big festival, such as Diwali, Holi, Eid al-Fitr and Christmas, if you will be open. You tap Closed all day or Open, and it sets that day as special hours on Google, so a festival day off goes on Google the way Google asks for it, as special hours, not as Temporarily closed. You can try it free for 14 days.</p>
+<h2>Frequently asked questions</h2>
+<h3>Why is my business showing temporarily closed on Google?</h3>
+<p>Either someone who manages your profile set the status, or Google received an update that you were closed, for example from people suggesting it on Google Maps. Google says the owner may get an email when it receives such an update. Reopen it from Edit profile, then Hours.</p>
+<h3>How do I change temporarily closed to open on Google?</h3>
+<p>Open your Business Profile, select Edit profile, then Hours, select Edit next to Hours, and choose Open with main hours. Tick the days you are open, set the times and save. Google reviews edits before they show.</p>
+<h3>What is the difference between temporarily closed and permanently closed?</h3>
+<p>Temporarily closed is for a break of more than 7 days, the off-season, or a closure with no end date. Permanently closed means the business has shut for good. A permanently closed profile can still appear when people search for it, clearly marked as closed.</p>
+<h3>Google par meri dukaan temporarily closed kyun dikh rahi hai?</h3>
+<p>Ya to profile manage karne wale kisi ne yeh status lagaya hai, ya Google ko update mila ki aapki dukaan band hai, jaise Google Maps par logon ke suggestion se. Theek karne ke liye apna Business Profile kholiye, Edit profile, phir Hours mein Open with main hours chuniye, din aur time set karke Save kijiye.</p>
+<p><em>Sources: Google Business Profile Help, <a href="https://support.google.com/business/answer/15300196" target="_blank" rel="noopener">Mark your business as closed</a>, <a href="https://support.google.com/business/answer/15300571" target="_blank" rel="noopener">Mark your business as reopened</a> and <a href="https://support.google.com/business/answer/3039617" target="_blank" rel="noopener">Edit your Business Profile</a>; Google Maps Help, <a href="https://support.google.com/maps/answer/10552932" target="_blank" rel="noopener">Mark a place reopened or closed on Google Maps</a>. Read 26 Nov 2026.</em></p>
+`,
+    faqs: [
+      {
+        q: 'Why is my business showing temporarily closed on Google?',
+        a: 'Either someone who manages your profile set the status, or Google received an update that you were closed, for example from people suggesting it on Google Maps. Google says the owner may get an email when it receives such an update. Reopen it from Edit profile, then Hours.',
+      },
+      {
+        q: 'How do I change temporarily closed to open on Google?',
+        a: 'Open your Business Profile, select Edit profile, then Hours, select Edit next to Hours, and choose Open with main hours. Tick the days you are open, set the times and save. Google reviews edits before they show.',
+      },
+      {
+        q: 'What is the difference between temporarily closed and permanently closed?',
+        a: 'Temporarily closed is for a break of more than 7 days, the off-season, or a closure with no end date. Permanently closed means the business has shut for good. A permanently closed profile can still appear when people search for it, clearly marked as closed.',
+      },
+      {
+        q: 'Google par meri dukaan temporarily closed kyun dikh rahi hai?',
+        a: 'Ya to profile manage karne wale kisi ne yeh status lagaya hai, ya Google ko update mila ki aapki dukaan band hai, jaise Google Maps par logon ke suggestion se. Theek karne ke liye apna Business Profile kholiye, Edit profile, phir Hours mein Open with main hours chuniye, din aur time set karke Save kijiye.',
+      },
+    ],
+  },
+  {
     slug: 'google-review-reply-not-showing',
     title: 'Why Your Google Review Reply Is Not Showing (and What to Do)',
     seoTitle: 'Google Review Reply Not Showing? Why and What to Do (2026)',
